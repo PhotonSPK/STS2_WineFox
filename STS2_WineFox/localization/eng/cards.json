@@ -1,0 +1,10 @@
+{
+  "WINE_FOX_STRIKE.title": "Strike",
+  "WINE_FOX_STRIKE.description": "Deal {Damage} damage.",
+  "WINE_FOX_DEFEND.title": "Defend",
+  "WINE_FOX_DEFEND.description": "Gain {Block} Block.",
+  "BASIC_MINE.title": "Basic Mine",
+  "BASIC_MINE.description": "Gain {Wood:diff()} {Wood:plural:[gold]Plank[/gold]|[gold]Planks[/gold]} and {Stone:diff()} {Stone:plural:[gold]Cobblestone[/gold]|[gold]Cobblestones[/gold]}.",
+  "STONE_PICK.title": "Stone Pick",
+  "STONE_PICK.description": "Gain {Digging:diff()} [gold]Digging[/gold]."
+}

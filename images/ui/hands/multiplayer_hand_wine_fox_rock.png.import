@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4o0x6n0mca0o"
-path="res://.godot/imported/mod_image.png-a802262bf1177e56d5f7ff2cd2c5ae6a.ctex"
+uid="uid://bojpwjxvio4m7"
+path="res://.godot/imported/multiplayer_hand_wine_fox_rock.png-f02ffe76ea3ef81e3b7137bbb070771f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://WineFox/mod_image.png"
-dest_files=["res://.godot/imported/mod_image.png-a802262bf1177e56d5f7ff2cd2c5ae6a.ctex"]
+source_file="res://images/ui/hands/multiplayer_hand_wine_fox_rock.png"
+dest_files=["res://.godot/imported/multiplayer_hand_wine_fox_rock.png-f02ffe76ea3ef81e3b7137bbb070771f.ctex"]
 
 [params]
 

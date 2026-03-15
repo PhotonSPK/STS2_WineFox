@@ -1,28 +1,29 @@
-﻿using BaseLib.Abstracts;
-using BaseLib.Utils;
+﻿using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.ValueProps;
 
-namespace STS2_WineFox.Cards.Basic;
-
-public class WineFoxDefend() : CustomCardModel(1,
-    CardType.Attack, CardRarity.Basic,
-    TargetType.Self)
+namespace STS2_WineFox.Cards.Basic
 {
-    protected override HashSet<CardTag> CanonicalTags => [CardTag.Defend];
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(5, ValueProp.Move)];
-    
-    protected override async Task OnPlay(
-        PlayerChoiceContext choiceContext,
-        CardPlay play)
+    public class WineFoxDefend() : WineFoxCard(1,
+        CardType.Skill, CardRarity.Basic,
+        TargetType.Self)
     {
-        await CommonActions.CardBlock(this, play);
-    }
+        public override bool GainsBlock => true;
+        protected override HashSet<CardTag> CanonicalTags => [CardTag.Defend];
+        protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(5, ValueProp.Move)];
 
-    protected override void OnUpgrade()
-    {
-        DynamicVars["Block"].UpgradeValueBy(3m);
+        protected override async Task OnPlay(
+            PlayerChoiceContext choiceContext,
+            CardPlay play)
+        {
+            await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block, play);
+        }
+
+        protected override void OnUpgrade()
+        {
+            DynamicVars["Block"].UpgradeValueBy(3m);
+        }
     }
 }

@@ -1,8 +1,8 @@
-﻿using BaseLib.Abstracts;
+﻿using STS2RitsuLib.Scaffolding.Content;
 
-namespace STS2_WineFox.Powers;
-
-public abstract class WineFoxPower : CustomPowerModel
+namespace STS2_WineFox.Powers
 {
-    
+    public abstract class WineFoxPower : ModPowerTemplate
+    {
+    }
 }

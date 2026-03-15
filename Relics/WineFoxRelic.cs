@@ -1,11 +1,8 @@
-﻿using BaseLib.Abstracts;
-using BaseLib.Utils;
-using STS2_WineFox.Character;
+﻿using STS2RitsuLib.Scaffolding.Content;
 
-namespace STS2_WineFox.Relics;
-
-[Pool(typeof(WineFoxRelicPool))]
-public abstract class WineFoxRelic : CustomRelicModel
+namespace STS2_WineFox.Relics
 {
-    
+    public abstract class WineFoxRelic : ModRelicTemplate
+    {
+    }
 }

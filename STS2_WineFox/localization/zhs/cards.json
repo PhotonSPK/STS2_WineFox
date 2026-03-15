@@ -1,0 +1,10 @@
+{
+  "WINE_FOX_STRIKE.title": "打击",
+  "WINE_FOX_STRIKE.description": "造成 {Damage} 点伤害。",
+  "WINE_FOX_DEFEND.title": "防御",
+  "WINE_FOX_DEFEND.description": "获得 {Block} 点格挡。",
+  "BASIC_MINE.title": "基础采掘",
+  "BASIC_MINE.description": "获得 {Wood:diff()} [gold]木板[/gold] 和 {Stone:diff()} [gold]圆石[/gold]。",
+  "STONE_PICK.title": "石镐",
+  "STONE_PICK.description": "获得 {Digging:diff()} 层 [gold]挖掘[/gold]。"
+}
