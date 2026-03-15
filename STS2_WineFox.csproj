@@ -40,16 +40,15 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Content Include="images\atlases\relic_atlas.sprites\hand_crank.tres" />
-        <Content Include="images\atlases\relic_outline_atlas.sprites\hand_crank.tres" />
+        <Content Include="images\atlases\relic_atlas.sprites\sts2_wine_fox_relic_hand_crank.tres" />
+        <Content Include="images\atlases\relic_outline_atlas.sprites\sts2_wine_fox_relic_hand_crank.tres" />
         <Content Include="images\packed\character_select\char_select_wine_fox.png" />
         <Content Include="images\packed\character_select\char_select_wine_fox.png.import" />
         <Content Include="images\packed\character_select\char_select_wine_fox_locked.png" />
         <Content Include="images\packed\character_select\char_select_wine_fox_locked.png.import" />
         <Content Include="images\packed\map\icons\map_marker_wine_fox.png" />
         <Content Include="images\packed\map\icons\map_marker_wine_fox.png.import" />
-        <Content Include="images\relics\hand_crank.png" />
-        <Content Include="images\relics\hand_crank.png.import" />
+        <Content Include="images\relics\sts2_wine_fox_relic_hand_crank.png" />
         <Content Include="images\ui\hands\multiplayer_hand_wine_fox_paper.png" />
         <Content Include="images\ui\hands\multiplayer_hand_wine_fox_paper.png.import" />
         <Content Include="images\ui\hands\multiplayer_hand_wine_fox_point.png" />
@@ -64,6 +63,7 @@
         <Content Include="images\ui\top_panel\character_icon_wine_fox_outline.png.import" />
         <Content Include="images\ui\transitions\silent_transition.png" />
         <Content Include="images\ui\transitions\silent_transition.png.import" />
+        <Content Include="images\winefox\character.png" />
         <Content Include="images\winefox\placeholder.png" />
         <Content Include="images\winefox\placeholder.png.import" />
         <Content Include="materials\transitions\wine_fox_transition_mat.tres" />

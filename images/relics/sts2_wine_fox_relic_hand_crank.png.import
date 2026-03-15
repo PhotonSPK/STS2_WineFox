@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dirgx8ekuau1u"
-path="res://.godot/imported/hand_crank.png-0e428c9cdddef8480fa6f18dd676ba4a.ctex"
+uid="uid://biehsrp588bgl"
+path="res://.godot/imported/sts2_wine_fox_relic_hand_crank.png-1b6cc57f09ffecce25f791b7b2e66365.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/relics/hand_crank.png"
-dest_files=["res://.godot/imported/hand_crank.png-0e428c9cdddef8480fa6f18dd676ba4a.ctex"]
+source_file="res://images/relics/sts2_wine_fox_relic_hand_crank.png"
+dest_files=["res://.godot/imported/sts2_wine_fox_relic_hand_crank.png-1b6cc57f09ffecce25f791b7b2e66365.ctex"]
 
 [params]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://fcuocamiai2r"]
 
-[ext_resource type="Texture2D" path="res://images/winefox/placeholder.png" id="1_char"]
+[ext_resource type="Texture2D" uid="uid://ld4curlaovfq" path="res://images/winefox/character.png" id="2_j8rvc"]
 [ext_resource type="Texture2D" uid="uid://cxet2gbswc6sk" path="res://images/packed/map/icons/map_marker_wine_fox.png" id="2_marker"]
 
 [node name="WineFoxBg" type="Control"]
@@ -80,21 +80,21 @@ offset_left = 872.0
 offset_top = 128.0
 offset_right = 1566.0
 offset_bottom = 1046.0
-texture = ExtResource("1_char")
+texture = ExtResource("2_j8rvc")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="CharacterArt" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 900.0
-offset_top = 52.0
-offset_right = 1572.0
-offset_bottom = 940.0
-texture = ExtResource("1_char")
-expand_mode = 1
+offset_left = -63.0
+offset_right = 2104.0
+offset_bottom = 1080.0
+texture = ExtResource("2_j8rvc")
+expand_mode = 3
 stretch_mode = 5
 
 [node name="AccentBar" type="ColorRect" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 842.0
 offset_top = 896.0
