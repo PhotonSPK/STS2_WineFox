@@ -23,7 +23,8 @@ namespace STS2_WineFox.Powers
         /// <summary>
         ///     批量获得两种材料。若拥有应力，则仅消耗 1 层，并将本次批量获得整体翻倍。
         /// </summary>
-        public static async Task GainMaterials<TFirst, TSecond>(CardModel card, decimal firstAmount, decimal secondAmount)
+        public static async Task GainMaterials<TFirst, TSecond>(CardModel card, decimal firstAmount,
+            decimal secondAmount)
             where TFirst : PowerModel
             where TSecond : PowerModel
         {
@@ -44,6 +45,28 @@ namespace STS2_WineFox.Powers
             }
 
             await PowerCmd.Apply<StressPower>(owner, -1m, owner, card);
+        }
+
+        /// <summary>
+        ///     消耗材料的统一入口。applier 传 null，跳过 ModifyPowerAmountGiven 钩子，
+        ///     避免 HandCrank 等效果在消耗时触发倍增。
+        /// </summary>
+        public static async Task LostMaterial<TFirst, TSecond>(CardModel card, decimal firstAmount,
+            decimal secondAmount)
+            where TFirst : MaterialPower
+            where TSecond : MaterialPower
+        {
+            var owner = card.Owner.Creature;
+            
+            var firstPower = owner.Powers.OfType<TFirst>()
+                .FirstOrDefault(power => power.Amount >= firstAmount);
+            var secondPower = owner.Powers.OfType<TSecond>()
+                .FirstOrDefault(power => power.Amount >= secondAmount);
+            
+            if (firstPower == null || secondPower == null) return;
+            
+            await PowerCmd.ModifyAmount(firstPower, -firstAmount, null, card);
+            await PowerCmd.ModifyAmount(secondPower, -secondAmount, null, card);
         }
 
         private static IDisposable BeginManualMaterialBatch()

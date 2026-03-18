@@ -6,5 +6,7 @@
   "STS2_WINE_FOX_CARD_BASIC_MINE.title": "Basic Mine",
   "STS2_WINE_FOX_CARD_BASIC_MINE.description": "Gain {Wood:diff()} {Wood:plural:[gold]Plank[/gold]|[gold]Planks[/gold]} and {Stone:diff()} {Stone:plural:[gold]Cobblestone[/gold]|[gold]Cobblestones[/gold]}.",
   "STS2_WINE_FOX_CARD_STONE_PICK.title": "Stone Pick",
-  "STS2_WINE_FOX_CARD_STONE_PICK.description": "Gain {Digging:diff()} [gold]Digging[/gold]."
+  "STS2_WINE_FOX_CARD_STONE_PICK.description": "Gain {Digging:diff()} [gold]Digging[/gold].",
+  "STS2_WINE_FOX_CARD_BASE_CRAFT.title": "基础合成",
+  "STS2_WINE_FOX_CARD_BASE_CRAFT.description": "消耗 2 层{Wood} [gold]木板[/gold] 和 2 层 {Stone} [gold]圆石[/gold]，获得 [gold]石镐[/gold]。"
 }

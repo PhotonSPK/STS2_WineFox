@@ -6,6 +6,7 @@ using MegaCrit.Sts2.Core.Hooks;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using STS2_WineFox.Powers;
+using STS2RitsuLib.Scaffolding.Content;
 
 namespace STS2_WineFox.Cards.Basic
 {
@@ -14,7 +15,7 @@ namespace STS2_WineFox.Cards.Basic
     {
         protected override IEnumerable<string> RegisteredKeywordIds =>
             [WineFoxKeywords.Digging];
-
+        
         protected override IEnumerable<DynamicVar> CanonicalVars =>
         [
             new MineMaterialVar<WoodPower>("Wood", 2m),

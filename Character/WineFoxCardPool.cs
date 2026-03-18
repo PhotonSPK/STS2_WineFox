@@ -13,7 +13,7 @@ namespace STS2_WineFox.Character
         public override string CardFrameMaterialPath => "card_frame_colorless";
 
         public override Color DeckEntryCardColor => new("d2a15a");
-        public override Color EnergyOutlineColor => new("fffd");
+        public override Color EnergyOutlineColor => new("8d4b24");
         public override bool IsColorless => false;
 
         protected override CardModel[] GenerateAllCards()
@@ -23,6 +23,7 @@ namespace STS2_WineFox.Character
                 ModelDb.Card<WineFoxStrike>(),
                 ModelDb.Card<WineFoxDefend>(),
                 ModelDb.Card<BasicMine>(),
+                ModelDb.Card<BaseCraft>(),
             ];
         }
     }
