@@ -3,12 +3,17 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using STS2_WineFox.Powers;
+using STS2RitsuLib.Scaffolding.Content;
 
 namespace STS2_WineFox.Cards.Token
 {
     public class StonePick() : WineFoxCard(0, CardType.Skill,
         CardRarity.Token, TargetType.Self)
     {
+        public override CardAssetProfile AssetProfile => new(
+            Const.Paths.CardStonePickaxe,
+            Const.Paths.CardStonePickaxe);
+
         protected override IEnumerable<string> RegisteredKeywordIds =>
             [WineFoxKeywords.Digging];
 

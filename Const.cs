@@ -31,13 +31,20 @@ public static class Const
 
         public const string DefaultTransitionMaterial = "res://materials/transitions/silent_transition_mat.tres";
         public const string DefaultTrailScene = "res://scenes/vfx/card_trail_silent.tscn";
-
+        //Power
         public const string WoodPowerIcon = Root + "/powers/sts2_wine_fox_power_wood_power.png";
         public const string WoodPowerBigIcon = Root + "/powers/sts2_wine_fox_wood_power.png";
         public const string StonePowerIcon = Root + "/powers/sts2_wine_fox_power_stone_power.png";
         public const string StonePowerBigIcon = Root + "/powers/sts2_wine_fox_stone_power.png";
         public const string StressPowerIcon = Root + "/powers/stress_power.png";
         public const string StressPowerBigIcon = Root + "/powers/stress_power.png";
+        public const string DiggingPowerIcon = Root + "/powers/digging.png";
+        //Card
+        public const string CardStonePickaxe = Root + "/cards/card_stone_pickaxe.png";
+        public const string CardWineFoxDefend = Root + "/cards/card_winefoxdefend.png";
+        public const string CardWineFoxStrike = Root + "/cards/card_winefoxstrike.png";
+        public const string CardBaseCraft = Root + "/cards/card_basecraft.png";
+        public const string CardBaseMine = Root + "/cards/card_basemine.png";
     }
 
     public static class Audio

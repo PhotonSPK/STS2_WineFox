@@ -18,7 +18,12 @@ namespace STS2_WineFox.Cards.Basic
             new MineMaterialVar<WoodPower>("Wood", 2m),
             new MineMaterialVar<StonePower>("Stone", 2m),
         ];
-
+        
+        public override CardAssetProfile AssetProfile => new(
+            Const.Paths.CardBaseMine,
+            Const.Paths.CardBaseMine
+        );
+        
         protected override async Task OnPlay(
             PlayerChoiceContext choiceContext,
             CardPlay play)
