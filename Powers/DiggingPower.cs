@@ -23,7 +23,7 @@ namespace STS2_WineFox.Powers
             if (cardPlay.Card.Type == CardType.Attack 
                 && cardPlay.Card is not BasicMine)
             {
-                await WineFoxActions.GainMaterials<WoodPower, StonePower>(cardPlay.Card, 1m, 1m);
+                await WineFoxActions.GainMaterials<WoodPower, StonePower>(cardPlay.Card, Amount, Amount);
             }
         }
     }

@@ -33,8 +33,7 @@ namespace STS2_WineFox.Cards.DynamicVars
             if (card.Owner?.Creature == null)
                 return BaseValue;
 
-            var amount = BaseValue +
-                         (card.Owner.Creature.Powers.OfType<DiggingPower>().FirstOrDefault()?.Amount ?? 0m);
+            var amount = BaseValue;
 
             if (!runGlobalHooks || card.CombatState == null)
                 return amount;

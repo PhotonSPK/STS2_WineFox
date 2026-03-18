@@ -28,12 +28,11 @@ namespace STS2_WineFox.Cards.Basic
             PlayerChoiceContext choiceContext,
             CardPlay play)
         {
-            var diggingBonus = Owner.Creature.Powers.OfType<DiggingPower>().FirstOrDefault()?.Amount ?? 0m;
 
             await WineFoxActions.GainMaterials<WoodPower, StonePower>(
                 this,
-                DynamicVars["Wood"].BaseValue + diggingBonus,
-                DynamicVars["Stone"].BaseValue + diggingBonus);
+                DynamicVars["Wood"].BaseValue,
+                DynamicVars["Stone"].BaseValue);
         }
 
         protected override void OnUpgrade()
