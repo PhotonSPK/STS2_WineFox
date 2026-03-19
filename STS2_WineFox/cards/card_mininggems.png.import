@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3p4wl1ji7hsr"
-path="res://.godot/imported/character_icon_wine_fox.png-126b3d22a769732447b248d0bb64d9ee.ctex"
+uid="uid://cu0elp7gpgnc1"
+path="res://.godot/imported/card_mininggems.png-59044c41839381a72dc216a64997fef6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://STS2_WineFox/ui/top_panel/character_icon_wine_fox.png"
-dest_files=["res://.godot/imported/character_icon_wine_fox.png-126b3d22a769732447b248d0bb64d9ee.ctex"]
+source_file="res://STS2_WineFox/cards/card_mininggems.png"
+dest_files=["res://.godot/imported/card_mininggems.png-59044c41839381a72dc216a64997fef6.ctex"]
 
 [params]
 

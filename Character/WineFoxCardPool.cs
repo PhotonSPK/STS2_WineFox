@@ -1,6 +1,8 @@
 ﻿using Godot;
 using STS2_WineFox.Cards.Basic;
 using STS2_WineFox.Cards.Common;
+using STS2_WineFox.Cards.Rare;
+using STS2_WineFox.Cards.UnCommon;
 using STS2RitsuLib.Scaffolding.Content;
 
 namespace STS2_WineFox.Character
@@ -12,7 +14,7 @@ namespace STS2_WineFox.Character
 
         public override string EnergyColorName => Const.EnergyColorName;
         public override string? TextEnergyIconPath => Const.Paths.EnergyIconCake;
-        public override string CardFrameMaterialPath => "card_frame_colorless";
+        public override string CardFrameMaterialPath => "card_frame_orange";
 
         public override Color DeckEntryCardColor => new("d2a15a");
         public override Color EnergyOutlineColor => new("8d4b24");
@@ -24,7 +26,9 @@ namespace STS2_WineFox.Character
             typeof(WineFoxDefend),
             typeof(BasicMine),
             typeof(BaseCraft),
-            typeof(FullAttack)
+            typeof(FullAttack),
+            typeof(MiningGems),
+            typeof(PlantTrees)
         ];
     }
 }

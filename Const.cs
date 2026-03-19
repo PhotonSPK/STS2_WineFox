@@ -18,12 +18,12 @@ public static class Const
         public const string CharacterIconScene = ScenesRoot + "/ui/character_icons/wine_fox_icon.tscn";
         public const string CharacterSelectBgScene = ScenesRoot + "/screens/char_select/char_select_bg_wine_fox.tscn";
 
-        public const string CharacterIcon = Root + "/ui/top_panel/character_icon_wine_fox.png";
-        public const string CharacterIconOutline = Root + "/ui/top_panel/character_icon_wine_fox_outline.png";
+        public const string CharacterIcon = Root + "/winefox/character_icon_wine_fox.png";
+        public const string CharacterIconOutline = Root + "/winefox/character_icon_wine_fox_outline.png";
         public const string CharacterSelectIcon = Root + "/packed/character_select/char_select_wine_fox.png";
 
         public const string CharacterSelectLockedIcon =
-            Root + "/packed/character_select/char_select_wine_fox_locked.png";
+            Root + "/winefox/char_select_wine_fox_locked.png";
 
         public const string MapMarker = Root + "/packed/map/icons/map_marker_wine_fox.png";
 
@@ -46,6 +46,8 @@ public static class Const
         public const string CardBaseCraft = Root + "/cards/card_basecraft.png";
         public const string CardBaseMine = Root + "/cards/card_basemine.png";
         public const string CardFullAttack = Root + "/cards/card_fullattack.png";
+        public const string CardMiningGems = Root + "/cards/card_mininggems.png";
+        public const string CardPlantTrees = Root + "/cards/card_planttrees.png";
     }
 
     public static class Audio

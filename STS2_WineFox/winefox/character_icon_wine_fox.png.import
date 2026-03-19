@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5dhqah5sfvqc"
-path="res://.godot/imported/character_icon_wine_fox_outline.png-4ce0ebc47ee7d40789df9d85f903f5d2.ctex"
+uid="uid://dd8gfpwgl046v"
+path="res://.godot/imported/character_icon_wine_fox.png-b020a8756295777166926c62ae8e9fe4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://STS2_WineFox/ui/top_panel/character_icon_wine_fox_outline.png"
-dest_files=["res://.godot/imported/character_icon_wine_fox_outline.png-4ce0ebc47ee7d40789df9d85f903f5d2.ctex"]
+source_file="res://STS2_WineFox/winefox/character_icon_wine_fox.png"
+dest_files=["res://.godot/imported/character_icon_wine_fox.png-b020a8756295777166926c62ae8e9fe4.ctex"]
 
 [params]
 
