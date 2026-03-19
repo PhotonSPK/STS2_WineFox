@@ -14,5 +14,5 @@
   "STS2_WINE_FOX_CARD_MINING_GEMS.title": "挖掘宝石",
   "STS2_WINE_FOX_CARD_MINING_GEMS.description": "消耗 1 层[gold]挖掘[/gold]，获得 1 个[gold]钻石[/gold]。",
   "STS2_WINE_FOX_CARD_PLANT_TREES.title": "种植树木",
-  "STS2_WINE_FOX_CARD_PLANT_TREES.description": "每回合开始时，获得 1 层[gold]木板[/gold]。"
+  "STS2_WINE_FOX_CARD_PLANT_TREES.description": "每回合开始时，获得 2 层[gold]木板[/gold]。"
 }
