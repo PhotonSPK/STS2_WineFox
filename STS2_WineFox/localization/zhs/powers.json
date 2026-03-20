@@ -16,5 +16,8 @@
   "STS2_WINE_FOX_POWER_STONE_POWER.smartDescription": "坚硬的[gold]圆石[/gold]，可用于合成。",
   "STS2_WINE_FOX_POWER_IRON_POWER.title": "铁锭",
   "STS2_WINE_FOX_POWER_IRON_POWER.description": "坚固的[gold]铁锭[/gold]，可用于高级合成。",
-  "STS2_WINE_FOX_POWER_IRON_POWER.smartDescription": "坚固的[gold]铁锭[/gold]，可用于高级合成。"
+  "STS2_WINE_FOX_POWER_IRON_POWER.smartDescription": "坚固的[gold]铁锭[/gold]，可用于高级合成。",
+  "STS2_WINE_FOX_POWER_STEAM_POWER.title": "蒸汽",
+  "STS2_WINE_FOX_POWER_STEAM_POWER.description": "每回合开始时，获得[blue]1[/blue]层[gold]应力[/gold]。",
+  "STS2_WINE_FOX_POWER_STEAM_POWER.smartDescription": "每回合开始时，获得[blue]{Amount}[/blue]层[gold]应力[/gold]。"
 }

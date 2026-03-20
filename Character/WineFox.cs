@@ -32,7 +32,6 @@ namespace STS2_WineFox.Character
             typeof(WineFoxDefend),
             typeof(BasicMine),
             typeof(BaseCraft),
-            typeof(FullAttack)
         ];
 
         protected override IEnumerable<Type> StartingRelicTypes => [typeof(HandCrank)];

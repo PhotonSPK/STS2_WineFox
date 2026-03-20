@@ -25,7 +25,6 @@ WineFox（酒狐）是一个自定义角色 Mod，围绕**材料合成**与**资
 | 防御（WineFoxDefend） | 4 |
 | 基础采掘（BasicMine） | 1 |
 | 基础合成（BaseCraft） | 1 |
-| 全力一击（FullAttack） | 1 |
 
 ---
 
@@ -41,6 +40,7 @@ WineFox（酒狐）是一个自定义角色 Mod，围绕**材料合成**与**资
 | PlantTrees（种植树木） | Uncommon | 1 | 获得 5 格挡，下回合获得 4 层种植；升级后格挡变为 7 |
 | MiningGems（挖掘宝石） | Rare | 2 | 消耗 1 层挖掘，获得 1 个钻石 |
 | StonePick（石镐） | Token | 0 | 获得挖掘层数（战斗中临时生成，带 Ethereal） |
+| SteamEngine（蒸汽引擎） | Rare | 2 | 给予1层 蒸汽 效果。(每回合开始时获得1应力) |
 
 ---
 

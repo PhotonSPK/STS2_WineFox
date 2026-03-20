@@ -33,13 +33,15 @@ public static class Const
         public const string DefaultTrailScene = "res://scenes/vfx/card_trail_silent.tscn";
         //Power
         public const string WoodPowerIcon = Root + "/powers/sts2_wine_fox_power_wood_power.png";
-        public const string WoodPowerBigIcon = Root + "/powers/sts2_wine_fox_wood_power.png";
+        public const string WoodPowerBigIcon = Root + "/powers/sts2_wine_fox_power_wood_power.png";
         public const string PlantPowerIcon = Root + "/powers/plant_power.png";
         public const string StonePowerIcon = Root + "/powers/sts2_wine_fox_power_stone_power.png";
-        public const string StonePowerBigIcon = Root + "/powers/sts2_wine_fox_stone_power.png";
+        public const string StonePowerBigIcon = Root + "/powers/sts2_wine_fox_power_stone_power.png";
         public const string StressPowerIcon = Root + "/powers/stress_power.png";
         public const string StressPowerBigIcon = Root + "/powers/stress_power.png";
         public const string DiggingPowerIcon = Root + "/powers/digging.png";
+        public const string SteamPowerIcon = Root + "/powers/steam_power.png";
+        public const string SteamPowerBigIcon = Root + "/powers/steam_power.png";
         //Card
         public const string CardStonePickaxe = Root + "/cards/card_stone_pickaxe.png";
         public const string CardWineFoxDefend = Root + "/cards/card_winefoxdefend.png";
@@ -49,6 +51,7 @@ public static class Const
         public const string CardFullAttack = Root + "/cards/card_fullattack.png";
         public const string CardMiningGems = Root + "/cards/card_mininggems.png";
         public const string CardPlantTrees = Root + "/cards/card_planttrees.png";
+        public const string CardSteamEngine = Root + "/cards/card_steamengine.png";
     }
 
     public static class Audio

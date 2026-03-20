@@ -14,5 +14,7 @@
   "STS2_WINE_FOX_CARD_MINING_GEMS.title": "挖掘宝石",
   "STS2_WINE_FOX_CARD_MINING_GEMS.description": "消耗 1 层[gold]挖掘[/gold]，获得 1 个[gold]钻石[/gold]。",
   "STS2_WINE_FOX_CARD_PLANT_TREES.title": "种植树木",
-  "STS2_WINE_FOX_CARD_PLANT_TREES.description": "获得 {Block:diff()} 点格挡。获得 {Plant:diff()} 层[gold]种植[/gold]。"
+  "STS2_WINE_FOX_CARD_PLANT_TREES.description": "获得 {Block:diff()} 点格挡。获得 {Plant:diff()} 层[gold]种植[/gold]。",
+  "STS2_WINE_FOX_CARD_STEAM_ENGINE.title": "蒸汽引擎",
+  "STS2_WINE_FOX_CARD_STEAM_ENGINE.description": "获得 {Steam:diff()} 层[gold]蒸汽[/gold]。"
 }
