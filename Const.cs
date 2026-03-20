@@ -34,6 +34,7 @@ public static class Const
         //Power
         public const string WoodPowerIcon = Root + "/powers/sts2_wine_fox_power_wood_power.png";
         public const string WoodPowerBigIcon = Root + "/powers/sts2_wine_fox_wood_power.png";
+        public const string PlantPowerIcon = Root + "/powers/plant_power.png";
         public const string StonePowerIcon = Root + "/powers/sts2_wine_fox_power_stone_power.png";
         public const string StonePowerBigIcon = Root + "/powers/sts2_wine_fox_stone_power.png";
         public const string StressPowerIcon = Root + "/powers/stress_power.png";

@@ -32,6 +32,7 @@ namespace STS2_WineFox.Content.Descriptors
             new PowerRegistrationEntry<StressPower>(),
             new PowerRegistrationEntry<DiggingPower>(),
             new PowerRegistrationEntry<WoodPower>(),
+            new PowerRegistrationEntry<PlantPower>(),
             new PowerRegistrationEntry<StonePower>(),
             new PowerRegistrationEntry<IronPower>(),
         ];
@@ -41,6 +42,7 @@ namespace STS2_WineFox.Content.Descriptors
             KeywordRegistrationEntry.Card(WineFoxKeywords.Digging, "STS2_WINEFOX-DIGGING"),
             KeywordRegistrationEntry.Card(WineFoxKeywords.Wood, "STS2_WINEFOX-WOOD"),
             KeywordRegistrationEntry.Card(WineFoxKeywords.Stone, "STS2_WINEFOX-STONE"),
+            KeywordRegistrationEntry.Card(WineFoxKeywords.Plant, "STS2_WINEFOX-PLANT"),
         ];
     }
 }

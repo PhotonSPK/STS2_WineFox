@@ -10,6 +10,7 @@ namespace STS2_WineFox.Cards
         public const string Wood = "wood";
         public const string Stone = "stone";
         public const string Iron = "iron";
+        public const string Plant = "plant";
 
         extension(CardModel card)
         {
@@ -36,6 +37,11 @@ namespace STS2_WineFox.Cards
             public bool IsIron()
             {
                 return card.HasModKeyword(Iron);
+            }
+
+            public bool IsPlant()
+            {
+                return card.HasModKeyword(Plant);
             }
         }
     }
