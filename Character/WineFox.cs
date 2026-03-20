@@ -10,7 +10,7 @@ namespace STS2_WineFox.Character
 {
     public class WineFox : ModCharacterTemplate<WineFoxCardPool, WineFoxRelicPool, WineFoxPotionPool>
     {
-        public static readonly Color Color = new("ffb6c1");
+        public static readonly Color Color = new("ffaf50");
 
         public override Color NameColor => Color;
         public override int StartingHp => 80;
