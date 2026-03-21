@@ -35,12 +35,14 @@ WineFox（酒狐）是一个自定义角色 Mod，围绕**材料合成**与**资
 | WineFoxStrike（打击） | Basic | 1 | 造成 6 点伤害 |
 | WineFoxDefend（防御） | Basic | 1 | 获得 5 点格挡 |
 | BasicMine（基础采掘） | Common | 1 | 获得木板和圆石各 2 层 |
-| BaseCraft（基础合成） | Common | 1 | 消耗 2 木板 + 2 圆石，获得石镐 |
+| BaseCraft（基础合成） | Basic | 1 | 消耗 2 木板 + 2 圆石，从合成品中选择一张获得；升级费用变为 0 |
 | FullAttack（全力一击） | Common | 2 | 消耗所有资源，每层对随机敌人造成 4 点伤害；升级后获得保留 |
 | PlantTrees（种植树木） | Uncommon | 1 | 获得 5 格挡，下回合获得 4 层种植；升级后格挡变为 7 |
 | MiningGems（挖掘宝石） | Rare | 2 | 消耗 1 层挖掘，获得 1 个钻石 |
-| StonePick（石镐） | Token | 0 | 获得挖掘层数（战斗中临时生成，带 Ethereal） |
-| SteamEngine（蒸汽引擎） | Rare | 2 | 给予1层 蒸汽 效果。(每回合开始时获得1应力) |
+| SteamEngine（蒸汽引擎） | Rare | 2 | 给予 1 层蒸汽（每回合开始时获得 1 应力）；升级费用变为 1 |
+| StonePick（石镐） | Token | 0 | 获得 1 层挖掘（战斗中由基础合成生成） |
+| StoneSword（石剑） | Token | 0 | 获得 4 层力量，接下来两个回合每回合 -2 层力量（战斗中由基础合成生成） |
+| IronArmor（铁甲） | Token | 0 | 获得 5 层覆甲（战斗中由基础合成生成） |
 
 ---
 
