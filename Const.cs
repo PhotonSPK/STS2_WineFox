@@ -54,6 +54,7 @@ public static class Const
         public const string CardPlantTrees = Root + "/cards/card_planttrees.png";
         public const string CardSteamEngine = Root + "/cards/card_steamengine.png";
         public const string CardStoneSword = Root + "/cards/card_stonesword.png";
+        public const string CardIronArmor = Root + "/cards/card_ironarmor.png";
     }
 
     public static class Audio

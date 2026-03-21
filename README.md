@@ -54,6 +54,7 @@ WineFox（酒狐）是一个自定义角色 Mod，围绕**材料合成**与**资
 | StressPower（应力） | Counter | 获得材料时消耗 1 层，使本次获得的材料数量翻倍 |
 | DiggingPower（挖掘） | Counter | 每次出攻击牌（非采掘）额外获得等量木板和圆石 |
 | PlantPower（种植） | Counter | 在下回合开始时获得等量木板，触发后移除自身 |
+| Steam（蒸汽） | Counter | 每回合开始时获得 1 应力。 |
 
 ---
 

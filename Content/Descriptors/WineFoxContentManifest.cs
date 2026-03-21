@@ -28,6 +28,7 @@ namespace STS2_WineFox.Content.Descriptors
             new CardRegistrationEntry<WineFoxCardPool, PlantTrees>(),
             new CardRegistrationEntry<WineFoxCardPool, SteamEngine>(),
             new CardRegistrationEntry<WineFoxCardPool, StoneSword>(),
+            new CardRegistrationEntry<WineFoxCardPool, IronArmor>(), 
 
             new RelicRegistrationEntry<WineFoxRelicPool, HandCrank>(),
 

@@ -5,8 +5,7 @@ namespace STS2_WineFox.Content.Descriptors
 {
     internal static class WineFoxCharacterAssets
     {
-        private static readonly CharacterAssetProfile BaseProfile = CharacterAssetProfiles.Silent();
-
+        private static readonly CharacterAssetProfile BaseProfile = CharacterAssetProfiles.Ironclad();
         internal static CharacterAssetProfile Profile { get; } = BaseProfile
             .WithScenes(BaseProfile.Scenes! with
             {

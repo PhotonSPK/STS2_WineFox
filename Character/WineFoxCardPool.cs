@@ -2,6 +2,7 @@
 using STS2_WineFox.Cards.Basic;
 using STS2_WineFox.Cards.Common;
 using STS2_WineFox.Cards.Rare;
+using STS2_WineFox.Cards.Token;
 using STS2_WineFox.Cards.UnCommon;
 using STS2RitsuLib.Scaffolding.Content;
 
@@ -28,7 +29,12 @@ namespace STS2_WineFox.Character
             typeof(BaseCraft),
             typeof(FullAttack),
             typeof(MiningGems),
-            typeof(PlantTrees)
+            typeof(PlantTrees),
+            typeof(SteamEngine),
+            //Token
+            typeof(StonePick),
+            typeof(StoneSword),
+            typeof(IronArmor),
         ];
     }
 }
