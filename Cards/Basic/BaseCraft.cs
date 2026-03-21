@@ -1,7 +1,13 @@
-﻿using MegaCrit.Sts2.Core.Commands;
+﻿using MegaCrit.Sts2.Core.CardSelection;
+using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Entities.Multiplayer;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Nodes.Combat;
+using MegaCrit.Sts2.Core.Nodes.Screens.CardSelection;
+using MegaCrit.Sts2.Core.Nodes.Screens.Overlays;
 using STS2_WineFox.Cards.Token;
 using STS2_WineFox.Powers;
 using STS2RitsuLib.Scaffolding.Content;
@@ -40,7 +46,6 @@ namespace STS2_WineFox.Cards.Basic
             if (Owner.Creature.CombatState is not { } combatState)
                 return;
 
-            // 创建两张 Token 供玩家选择
             var options = new List<CardModel>
             {
                 combatState.CreateCard<StonePick>(Owner),
@@ -48,8 +53,19 @@ namespace STS2_WineFox.Cards.Basic
                 combatState.CreateCard<IronArmor>(Owner)
             };
 
-            var chosen = await CardSelectCmd.FromChooseACardScreen(
-                choiceContext, options, Owner, canSkip: false);
+            var prefs = new CardSelectorPrefs(
+                new LocString("cards", "STS2_WINE_FOX_CHOOSE_CRAFT"),
+                1);
+
+            await choiceContext.SignalPlayerChoiceBegun(PlayerChoiceOptions.None);
+            NPlayerHand.Instance?.CancelAllCardPlay();
+
+            var screen = NSimpleCardSelectScreen.Create(options, prefs);
+            NOverlayStack.Instance!.Push(screen);
+
+            var chosen = (await screen.CardsSelected()).FirstOrDefault();
+
+            await choiceContext.SignalPlayerChoiceEnded();
 
             if (chosen == null) return;
 
