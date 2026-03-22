@@ -14,6 +14,7 @@ namespace STS2_WineFox.Cards
         public const string Steam =  "steam";
         public const string Strength = "strength";
         public const string Plating = "plating";
+        public const string Diamond = "diamond";
 
         extension(CardModel card)
         {
@@ -50,6 +51,11 @@ namespace STS2_WineFox.Cards
             public bool IsSteam()
             {
                 return card.HasModKeyword(Steam);
+            }
+
+            public bool IsDiamond()
+            {
+                return card.HasModKeyword(Diamond);
             }
         }
     }

@@ -3,6 +3,7 @@ using STS2_WineFox.Cards.Basic;
 using STS2_WineFox.Cards.Common;
 using STS2_WineFox.Cards.Rare;
 using STS2_WineFox.Cards.Token;
+using STS2_WineFox.Cards.Uncommon;
 using STS2_WineFox.Cards.UnCommon;
 using STS2RitsuLib.Scaffolding.Content;
 
@@ -31,12 +32,14 @@ namespace STS2_WineFox.Character
             typeof(MiningGems),
             typeof(PlantTrees),
             typeof(SteamEngine),
+            typeof(MechanicalDrill),
             //Token
             typeof(StonePickaxe),
             typeof(StoneSword),
             typeof(IronArmor),
             typeof(WoodenSword),
             typeof(IronPickaxe),
+            typeof(DiamondSword),
         ];
     }
 }

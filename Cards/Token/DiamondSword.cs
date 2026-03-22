@@ -5,29 +5,30 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using STS2_WineFox.Powers;
 using STS2RitsuLib.Scaffolding.Content;
 
-namespace STS2_WineFox.Cards.Rare
+namespace STS2_WineFox.Cards.Token
 {
-    public class MiningGems() : WineFoxCard(2, CardType.Skill, CardRarity.Rare, TargetType.Self)
+    public class DiamondSword() : WineFoxCard(
+        0, CardType.Power, CardRarity.Token, TargetType.Self,
+        showInCardLibrary: false, autoAdd: false)
     {
         protected override IEnumerable<DynamicVar> CanonicalVars =>
-            [new("Diamond", 2m)];
-        protected override IEnumerable<string> RegisteredKeywordIds =>
-            [WineFoxKeywords.Diamond];
+            [new("Echoes", 1m)];
 
         public override CardAssetProfile AssetProfile => new(
-            Const.Paths.CardMiningGems,
-            Const.Paths.CardMiningGems);
+            Const.Paths.CardDiamondSword,
+            Const.Paths.CardDiamondSword);
 
         protected override async Task OnPlay(
             PlayerChoiceContext choiceContext,
             CardPlay play)
         {
-            await WineFoxActions.GainMaterial<DiamondPower>(this, DynamicVars["Diamond"].BaseValue);
+            await PowerCmd.Apply<DiamondSwordPower>(
+                Owner.Creature, DynamicVars["Echoes"].BaseValue, Owner.Creature, this);
         }
 
         protected override void OnUpgrade()
         {
-            DynamicVars["Diamond"].UpgradeValueBy(1m);// 2 → 3
+            DynamicVars["Echoes"].UpgradeValueBy(1m); // 1 → 2
         }
     }
 }

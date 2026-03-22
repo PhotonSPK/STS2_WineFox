@@ -33,6 +33,7 @@ namespace STS2_WineFox.Content.Descriptors
             new CardRegistrationEntry<WineFoxCardPool,MechanicalDrill>(),
             new CardRegistrationEntry<WineFoxCardPool, WoodenSword>(),
             new CardRegistrationEntry<WineFoxCardPool, IronPickaxe>(),
+            new CardRegistrationEntry<WineFoxCardPool, DiamondSword>(),
             
             new RelicRegistrationEntry<WineFoxRelicPool, HandCrank>(),
 
@@ -46,6 +47,9 @@ namespace STS2_WineFox.Content.Descriptors
             new PowerRegistrationEntry<StoneSwordPower>(),
             new PowerRegistrationEntry<WoodenSwordPower>(),
             new PowerRegistrationEntry<IronPickaxePower>(),
+            new PowerRegistrationEntry<DiamondPower>(),
+            new PowerRegistrationEntry<DiamondSwordPower>(),
+            
         ];
         private const string Root = "res://STS2_WineFox";
         public static IReadOnlyList<KeywordRegistrationEntry> KeywordEntries { get; } =
@@ -57,6 +61,7 @@ namespace STS2_WineFox.Content.Descriptors
             KeywordRegistrationEntry.Card(WineFoxKeywords.Steam, "STS2_WINEFOX-STEAM",$"{Root}/powers/steam_power.png"),
             KeywordRegistrationEntry.Card(WineFoxKeywords.Stress, "STS2_WINEFOX-STRESS",$"{Root}/powers/stress_power.png"),
             KeywordRegistrationEntry.Card(WineFoxKeywords.Iron, "STS2_WINEFOX-IRON",$"{Root}/powers/iron_power.png"),
+            KeywordRegistrationEntry.Card(WineFoxKeywords.Diamond, "STS2_WINEFOX-DIAMOND",$"{Root}/powers/diamond_power.png"),
             KeywordRegistrationEntry.Card(WineFoxKeywords.Strength,  "STS2_WINEFOX-STRENGTH", "res://images/powers/strength_power.png"),
             KeywordRegistrationEntry.Card(WineFoxKeywords.Plating,   "STS2_WINEFOX-PLATING",  "res://images/powers/plating_power.png"),
         ];
