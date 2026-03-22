@@ -61,7 +61,13 @@ namespace STS2_WineFox.Cards
             ),
             //木剑
             new((state, owner) => state.CreateCard<WoodenSword>(owner),
-                new CraftCost(typeof(WoodPower),  2m))
+                new CraftCost(typeof(WoodPower),  2m)
+                ),
+            //铁镐
+            new(
+                (state, owner) => state.CreateCard<IronPickaxe>(owner),
+                new CraftCost(typeof(IronPower), 3m)  // 消耗 3 铁锭
+            ),
         ];
     }
 }

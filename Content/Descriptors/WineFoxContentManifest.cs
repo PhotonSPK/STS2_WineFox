@@ -32,6 +32,7 @@ namespace STS2_WineFox.Content.Descriptors
             new CardRegistrationEntry<WineFoxCardPool, IronArmor>(), 
             new CardRegistrationEntry<WineFoxCardPool,MechanicalDrill>(),
             new CardRegistrationEntry<WineFoxCardPool, WoodenSword>(),
+            new CardRegistrationEntry<WineFoxCardPool, IronPickaxe>(),
             
             new RelicRegistrationEntry<WineFoxRelicPool, HandCrank>(),
 
@@ -44,6 +45,7 @@ namespace STS2_WineFox.Content.Descriptors
             new PowerRegistrationEntry<SteamPower>(),
             new PowerRegistrationEntry<StoneSwordPower>(),
             new PowerRegistrationEntry<WoodenSwordPower>(),
+            new PowerRegistrationEntry<IronPickaxePower>(),
         ];
         private const string Root = "res://STS2_WineFox";
         public static IReadOnlyList<KeywordRegistrationEntry> KeywordEntries { get; } =

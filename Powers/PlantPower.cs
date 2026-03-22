@@ -6,6 +6,7 @@ using STS2RitsuLib.Scaffolding.Content;
 
 namespace STS2_WineFox.Powers
 {
+    
     public class PlantPower : WineFoxPower
     {
         public override PowerType Type => PowerType.Buff;
@@ -21,7 +22,7 @@ namespace STS2_WineFox.Powers
             if (player.Creature != Owner) return;
 
             Flash();
-            await PowerCmd.Apply<WoodPower>(Owner, (decimal)Amount, Owner, null);
+            await WineFoxActions.GainMaterial<WoodPower>(Owner, Amount);
             await PowerCmd.Remove(this);
         }
     }
