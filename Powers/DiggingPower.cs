@@ -19,8 +19,8 @@ namespace STS2_WineFox.Powers
             if (player.Creature != Owner) return;
 
             Flash();
-            await PowerCmd.Apply<WoodPower>(Owner, 1m, Owner, null);
-            await PowerCmd.Apply<StonePower>(Owner, 1m, Owner, null);
+            await PowerCmd.Apply<WoodPower>(Owner, (decimal)Amount, Owner, null);
+            await PowerCmd.Apply<StonePower>(Owner, (decimal)Amount, Owner, null);
         }
     }
 }

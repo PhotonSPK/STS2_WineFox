@@ -33,7 +33,9 @@
   "STS2_WINE_FOX_CARD_MECHANICAL_SAW.title": "动力锯",
   "STS2_WINE_FOX_CARD_MECHANICAL_SAW.description": "消耗 1 应力，对所有敌人造成 {Damage:diff()} 点伤害。",
   "STS2_WINE_FOX_CARD_IRON_SWORD.title": "铁剑",
-  "STS2_WINE_FOX_CARD_IRON_SWORD.description": "造成 {Damage:diff()} 点伤害。\n下一张[gold]攻击[/gold]牌额外打出一次。\n(1个[gold]木板[/gold],2个[gold]铁锭[/gold])"
+  "STS2_WINE_FOX_CARD_IRON_SWORD.description": "造成 {Damage:diff()} 点伤害。\n下一张[gold]攻击[/gold]牌额外打出一次。\n(1个[gold]木板[/gold],2个[gold]铁锭[/gold])",
+  "STS2_WINE_FOX_CARD_ALTER_PATH.title": "另辟蹊径",
+  "STS2_WINE_FOX_CARD_ALTER_PATH.description": "消耗 2 木板，获得 {Block:diff()} 点格挡，抽 3 张牌。"
   
   
   

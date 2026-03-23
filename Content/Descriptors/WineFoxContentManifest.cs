@@ -37,6 +37,7 @@ namespace STS2_WineFox.Content.Descriptors
             new CardRegistrationEntry<WineFoxCardPool, DiamondSword>(),
             new CardRegistrationEntry<WineFoxCardPool, MechanicalSaw>(),
             new CardRegistrationEntry<WineFoxCardPool, IronSword>(),
+            new CardRegistrationEntry<WineFoxCardPool, AlterPath>(),
 
             new RelicRegistrationEntry<WineFoxRelicPool, HandCrank>(),
 

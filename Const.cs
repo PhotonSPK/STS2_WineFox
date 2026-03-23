@@ -72,6 +72,7 @@ namespace STS2_WineFox
             public const string CardDiamondSword = Root + "/cards/card_diamondsword.png";
             public const string CardMechanicalSaw = Root + "/cards/card_mechanicalsaw.png";
             public const string CardIronSword = Root + "/cards/card_ironsword.png";
+            public const string CardAlterPath =  Root + "/cards/card_alterpath.png";
         }
 
         public static class Audio
