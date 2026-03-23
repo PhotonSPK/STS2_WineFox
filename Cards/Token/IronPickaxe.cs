@@ -9,16 +9,14 @@ namespace STS2_WineFox.Cards.Token
 {
     public class IronPickaxe() : WineFoxCard(
         0, CardType.Skill, CardRarity.Token, TargetType.Self,
-        showInCardLibrary: false, autoAdd: false)
+        false, false)
     {
         protected override IEnumerable<DynamicVar> CanonicalVars =>
             [new("Times", 2m)];
 
         public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
 
-        public override CardAssetProfile AssetProfile => new(
-            Const.Paths.CardIronPickaxe,
-            Const.Paths.CardIronPickaxe);
+        public override CardAssetProfile AssetProfile => Art(Const.Paths.CardIronPickaxe);
 
         protected override async Task OnPlay(
             PlayerChoiceContext choiceContext,

@@ -12,5 +12,10 @@ namespace STS2_WineFox.Cards
         bool autoAdd = true) : ModCardTemplate(baseCost, type, rarity, target, showInCardLibrary, autoAdd)
     {
         public override string? CustomEnergyIconPath => Const.Paths.EnergyIconCake;
+
+        protected static CardAssetProfile Art(string portraitPath)
+        {
+            return new(portraitPath, portraitPath);
+        }
     }
 }

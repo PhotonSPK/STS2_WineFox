@@ -1,48 +1,27 @@
 ﻿using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
-using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
 using STS2_WineFox.Powers;
+using STS2RitsuLib.Cards.DynamicVars;
 using STS2RitsuLib.Scaffolding.Content;
 
 namespace STS2_WineFox.Cards.Uncommon
 {
     public class FullAttack() : WineFoxCard(2, CardType.Attack, CardRarity.Uncommon, TargetType.RandomEnemy)
     {
-        private sealed class TotalHitsVar() : DynamicVar("Hits", 0m)
-        {
-            public override void UpdateCardPreview(
-                CardModel card, CardPreviewMode previewMode,
-                Creature? target, bool runGlobalHooks)
-            {
-                PreviewValue = CalcHits(card);
-            }
-
-            protected override decimal GetBaseValueForIConvertible()
-                => CalcHits(_owner as CardModel);
-
-            private static decimal CalcHits(CardModel? card)
-            {
-                var creature = card?._owner?.Creature;
-                if (creature == null) return 0m;
-                var wood = creature.Powers.OfType<WoodPower>().FirstOrDefault()?.Amount ?? 0;
-                var stone = creature.Powers.OfType<StonePower>().FirstOrDefault()?.Amount ?? 0;
-                return wood + stone;
-            }
-        }
-        
         protected override IEnumerable<string> RegisteredKeywordIds =>
             [WineFoxKeywords.Wood, WineFoxKeywords.Stone];
 
         protected override IEnumerable<DynamicVar> CanonicalVars =>
-            [new DamageVar(4m, ValueProp.Move), new TotalHitsVar()];
+        [
+            new DamageVar(4m, ValueProp.Move),
+            ModCardVars.Computed("Hits", 0m, CalcHits),
+        ];
 
-        public override CardAssetProfile AssetProfile => new(
-            Const.Paths.CardFullAttack,
-            Const.Paths.CardFullAttack);
+        public override CardAssetProfile AssetProfile => Art(Const.Paths.CardFullAttack);
 
         protected override bool IsPlayable
         {
@@ -76,11 +55,11 @@ namespace STS2_WineFox.Cards.Uncommon
                 await PowerCmd.ModifyAmount(woodPower, -(decimal)woodAmount, null, this);
             if (stonePower != null && stoneAmount > 0)
                 await PowerCmd.ModifyAmount(stonePower, -(decimal)stoneAmount, null, this);
-            
+
             await DamageCmd.Attack(DynamicVars.Damage.BaseValue)
-                .WithHitCount((int)totalHits)
+                .WithHitCount(totalHits)
                 .FromCard(this)
-                .TargetingRandomOpponents(combatState)  
+                .TargetingRandomOpponents(combatState)
                 .WithHitFx("vfx/vfx_attack_slash")
                 .Execute(choiceContext);
         }
@@ -88,6 +67,17 @@ namespace STS2_WineFox.Cards.Uncommon
         protected override void OnUpgrade()
         {
             AddKeyword(CardKeyword.Retain);
+        }
+
+        private static decimal CalcHits(CardModel? card)
+        {
+            var creature = card?._owner?.Creature;
+            if (creature == null)
+                return 0m;
+
+            var wood = creature.Powers.OfType<WoodPower>().FirstOrDefault()?.Amount ?? 0;
+            var stone = creature.Powers.OfType<StonePower>().FirstOrDefault()?.Amount ?? 0;
+            return wood + stone;
         }
     }
 }

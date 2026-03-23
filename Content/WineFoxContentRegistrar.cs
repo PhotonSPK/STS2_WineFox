@@ -7,14 +7,9 @@ namespace STS2_WineFox.Content
     {
         internal static void RegisterAll()
         {
-            var content = RitsuLibFramework.GetContentRegistry(Const.ModId);
-            var keywords = RitsuLibFramework.GetKeywordRegistry(Const.ModId);
-
-            foreach (var entry in WineFoxContentManifest.ContentEntries)
-                entry.Register(content);
-
-            foreach (var entry in WineFoxContentManifest.KeywordEntries)
-                entry.Register(keywords);
+            RitsuLibFramework.CreateContentPack(Const.ModId)
+                .Manifest(WineFoxContentManifest.ContentEntries, WineFoxContentManifest.KeywordEntries)
+                .Apply();
         }
     }
 }

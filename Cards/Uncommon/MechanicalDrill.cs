@@ -1,5 +1,4 @@
-﻿using MegaCrit.Sts2.Core.Commands;
-using MegaCrit.Sts2.Core.Entities.Cards;
+﻿using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using STS2_WineFox.Powers;
@@ -15,9 +14,7 @@ namespace STS2_WineFox.Cards.Uncommon
         protected override IEnumerable<DynamicVar> CanonicalVars =>
             [new("Iron", 2m)];
 
-        public override CardAssetProfile AssetProfile => new(
-            Const.Paths.CardMechanicalDrill,
-            Const.Paths.CardMechanicalDrill);
+        public override CardAssetProfile AssetProfile => Art(Const.Paths.CardMechanicalDrill);
 
         protected override async Task OnPlay(
             PlayerChoiceContext choiceContext,
@@ -32,10 +29,7 @@ namespace STS2_WineFox.Cards.Uncommon
             await WineFoxActions.GainMaterial<IronPower>(this, DynamicVars["Iron"].BaseValue);
 
             // 有应力则返还 2 费用
-            if (stressPower != null)
-            {
-                Owner.PlayerCombatState?.Energy += 2;
-            }
+            if (stressPower != null) Owner.PlayerCombatState?.Energy += 2;
         }
 
         protected override void OnUpgrade()

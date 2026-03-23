@@ -11,10 +11,7 @@ namespace STS2_WineFox.Powers
         public override PowerType Type => PowerType.Buff;
         public override PowerStackType StackType => PowerStackType.Counter;
 
-        public override PowerAssetProfile AssetProfile => new(
-            Const.Paths.DiggingPowerIcon,
-            Const.Paths.DiggingPowerIcon
-        );
+        public override PowerAssetProfile AssetProfile => Icons(Const.Paths.DiggingPowerIcon);
 
         public override async Task AfterPlayerTurnStart(
             PlayerChoiceContext choiceContext, Player player)

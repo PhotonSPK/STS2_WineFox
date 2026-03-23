@@ -11,7 +11,7 @@ namespace STS2_WineFox.Cards
         public const string Stone = "stone";
         public const string Iron = "iron";
         public const string Plant = "plant";
-        public const string Steam =  "steam";
+        public const string Steam = "steam";
         public const string Strength = "strength";
         public const string Plating = "plating";
         public const string Diamond = "diamond";
@@ -47,7 +47,7 @@ namespace STS2_WineFox.Cards
             {
                 return card.HasModKeyword(Plant);
             }
-            
+
             public bool IsSteam()
             {
                 return card.HasModKeyword(Steam);

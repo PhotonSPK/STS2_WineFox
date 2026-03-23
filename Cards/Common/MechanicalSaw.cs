@@ -16,9 +16,7 @@ namespace STS2_WineFox.Cards.Common
         protected override IEnumerable<DynamicVar> CanonicalVars =>
             [new DamageVar(15m, ValueProp.Move)];
 
-        public override CardAssetProfile AssetProfile => new(
-            Const.Paths.CardMechanicalSaw,
-            Const.Paths.CardMechanicalSaw);
+        public override CardAssetProfile AssetProfile => Art(Const.Paths.CardMechanicalSaw);
 
         protected override bool IsPlayable =>
             Owner.Creature.Powers.OfType<StressPower>().Any(p => (decimal)p.Amount > 0);
@@ -29,9 +27,9 @@ namespace STS2_WineFox.Cards.Common
         {
             var owner = Owner.Creature;
             if (owner.CombatState is not { } combatState) return;
-            
+
             await PowerCmd.Apply<StressPower>(owner, -1m, owner, this);
-            
+
             await DamageCmd.Attack(DynamicVars.Damage.BaseValue)
                 .FromCard(this)
                 .TargetingAllOpponents(combatState)

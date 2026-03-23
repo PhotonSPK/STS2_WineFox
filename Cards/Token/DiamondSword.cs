@@ -10,15 +10,14 @@ namespace STS2_WineFox.Cards.Token
 {
     public class DiamondSword() : WineFoxCard(
         0, CardType.Attack, CardRarity.Token, TargetType.AnyEnemy,
-        showInCardLibrary: false, autoAdd: false)
+        false, false)
     {
         protected override IEnumerable<DynamicVar> CanonicalVars =>
             [new DamageVar(20m, ValueProp.Move), new("Echoes", 1m)];
+
         public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
 
-        public override CardAssetProfile AssetProfile => new(
-            Const.Paths.CardDiamondSword,
-            Const.Paths.CardDiamondSword);
+        public override CardAssetProfile AssetProfile => Art(Const.Paths.CardDiamondSword);
 
         protected override async Task OnPlay(
             PlayerChoiceContext choiceContext,

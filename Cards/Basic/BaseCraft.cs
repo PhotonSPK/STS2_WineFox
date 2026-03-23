@@ -3,14 +3,11 @@ using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Multiplayer;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Nodes.Combat;
 using MegaCrit.Sts2.Core.Nodes.Screens.CardSelection;
 using MegaCrit.Sts2.Core.Nodes.Screens.Overlays;
 using MegaCrit.Sts2.Core.ValueProps;
-using STS2_WineFox.Powers;
 using STS2RitsuLib.Scaffolding.Content;
 
 namespace STS2_WineFox.Cards.Basic
@@ -21,15 +18,13 @@ namespace STS2_WineFox.Cards.Basic
             [WineFoxKeywords.Wood, WineFoxKeywords.Stone];
 
         public override bool GainsBlock => true;
+
         protected override IEnumerable<DynamicVar> CanonicalVars =>
             [new BlockVar(5, ValueProp.Move)];
-        
+
         public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Retain];
 
-        public override CardAssetProfile AssetProfile => new(
-            Const.Paths.CardBaseCraft,
-            Const.Paths.CardBaseCraft
-        );
+        public override CardAssetProfile AssetProfile => Art(Const.Paths.CardBaseCraft);
 
         // 至少有一个配方可以合成时才可打出
         protected override bool IsPlayable =>
@@ -43,24 +38,17 @@ namespace STS2_WineFox.Cards.Basic
             if (Owner.Creature.CombatState is not { } combatState)
                 return;
 
-            // 只保留当前材料能满足的配方
-            var craftable = CraftRecipeRegistry.All
-                .Where(r => r.CanCraft(Owner.Creature))
-                .ToList();
-
-            // 按配方创建对应的卡牌供选择
-            var options = craftable
-                .Select(r => r.Factory(combatState, Owner))
-                .ToList();
+            // 获取所有可合成的配方，展示选择界面
+            var options = CraftRecipeRegistry.CreateOptions(combatState, Owner);
 
             var prefs = new CardSelectorPrefs(
-                new LocString("cards", "STS2_WINE_FOX_CHOOSE_CRAFT"),
+                new("cards", "STS2_WINE_FOX_CHOOSE_CRAFT"),
                 1);
 
             await choiceContext.SignalPlayerChoiceBegun(PlayerChoiceOptions.None);
             NPlayerHand.Instance?.CancelAllCardPlay();
 
-            var screen = NSimpleCardSelectScreen.Create(options, prefs);
+            var screen = NSimpleCardSelectScreen.Create(options.Select(option => option.Card).ToList(), prefs);
             NOverlayStack.Instance!.Push(screen);
 
             var chosen = (await screen.CardsSelected()).FirstOrDefault();
@@ -70,8 +58,10 @@ namespace STS2_WineFox.Cards.Basic
             if (chosen == null) return;
 
             // 找到选中卡对应的配方，消耗对应材料
-            var chosenIndex = options.IndexOf(chosen);
-            await craftable[chosenIndex].ConsumeMaterials(this);
+            var selectedOption = options.FirstOrDefault(option => ReferenceEquals(option.Card, chosen));
+            if (selectedOption == null) return;
+
+            await selectedOption.Recipe.ConsumeMaterials(this);
 
             await CardPileCmd.AddGeneratedCardToCombat(chosen, PileType.Hand, false);
         }

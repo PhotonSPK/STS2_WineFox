@@ -4,8 +4,7 @@ namespace STS2_WineFox.Powers
 {
     public class StonePower : MaterialPower
     {
-        public override PowerAssetProfile AssetProfile => new(
-            Const.Paths.StonePowerIcon,
-            Const.Paths.StonePowerBigIcon);
+        public override PowerAssetProfile AssetProfile =>
+            Icons(Const.Paths.StonePowerIcon, Const.Paths.StonePowerBigIcon);
     }
 }

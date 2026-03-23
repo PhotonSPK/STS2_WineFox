@@ -11,9 +11,8 @@ namespace STS2_WineFox.Powers
         public override PowerType Type => PowerType.Buff;
         public override PowerStackType StackType => PowerStackType.Counter;
 
-        public override PowerAssetProfile AssetProfile => new(
-            Const.Paths.SteamPowerIcon,
-            Const.Paths.SteamPowerBigIcon);
+        public override PowerAssetProfile AssetProfile =>
+            Icons(Const.Paths.SteamPowerIcon, Const.Paths.SteamPowerBigIcon);
 
         public override async Task AfterPlayerTurnStart(
             PlayerChoiceContext choiceContext, Player player)
@@ -21,7 +20,7 @@ namespace STS2_WineFox.Powers
             if (player.Creature != Owner) return;
 
             Flash();
-            await PowerCmd.Apply<StressPower>(Owner, (decimal)Amount, Owner, null);
+            await PowerCmd.Apply<StressPower>(Owner, Amount, Owner, null);
         }
     }
 }

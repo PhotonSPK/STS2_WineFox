@@ -4,8 +4,6 @@ namespace STS2_WineFox.Powers
 {
     public class DiamondPower : MaterialPower
     {
-        public override PowerAssetProfile AssetProfile => new(
-            Const.Paths.DiamondPowerIcon,
-            Const.Paths.DiamondPowerIcon);
+        public override PowerAssetProfile AssetProfile => Icons(Const.Paths.DiamondPowerIcon);
     }
 }

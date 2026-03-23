@@ -10,16 +10,14 @@ namespace STS2_WineFox.Cards.Token
 {
     public class WoodenSword() : WineFoxCard(
         0, CardType.Attack, CardRarity.Token, TargetType.AnyEnemy,
-        showInCardLibrary: false, autoAdd: false)
+        false, false)
     {
         protected override IEnumerable<DynamicVar> CanonicalVars =>
             [new DamageVar(6m, ValueProp.Move), new("Vigorous", 4m)];
 
         public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
 
-        public override CardAssetProfile AssetProfile => new(
-            Const.Paths.CardWoodenSword,
-            Const.Paths.CardWoodenSword);
+        public override CardAssetProfile AssetProfile => Art(Const.Paths.CardWoodenSword);
 
         protected override async Task OnPlay(
             PlayerChoiceContext choiceContext,
@@ -34,7 +32,7 @@ namespace STS2_WineFox.Cards.Token
                     .Targeting(target)
                     .WithHitFx("vfx/vfx_attack_slash")
                     .Execute(choiceContext);
-            
+
             await PowerCmd.Apply<VigorPower>(
                 Owner.Creature, DynamicVars["Vigorous"].BaseValue, Owner.Creature, this);
         }

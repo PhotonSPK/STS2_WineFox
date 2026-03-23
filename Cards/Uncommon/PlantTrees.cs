@@ -16,11 +16,9 @@ namespace STS2_WineFox.Cards.Uncommon
         //     [WineFoxKeywords.Plant, WineFoxKeywords.Wood];
 
         protected override IEnumerable<DynamicVar> CanonicalVars =>
-            [new BlockVar(5, ValueProp.Move), new ("Plant", 4m)];
+            [new BlockVar(5, ValueProp.Move), new("Plant", 4m)];
 
-        public override CardAssetProfile AssetProfile => new(
-            Const.Paths.CardPlantTrees,
-            Const.Paths.CardPlantTrees);
+        public override CardAssetProfile AssetProfile => Art(Const.Paths.CardPlantTrees);
 
         protected override async Task OnPlay(
             PlayerChoiceContext choiceContext,

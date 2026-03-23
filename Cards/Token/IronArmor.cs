@@ -9,14 +9,13 @@ namespace STS2_WineFox.Cards.Token
 {
     public class IronArmor() : WineFoxCard(
         0, CardType.Skill, CardRarity.Token, TargetType.Self,
-        showInCardLibrary: false, autoAdd: false)
+        false, false)
     {
         protected override IEnumerable<DynamicVar> CanonicalVars =>
             [new("Armor", 5m)];
+
         public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
-        public override CardAssetProfile AssetProfile => new(
-            Const.Paths.CardIronArmor,
-            Const.Paths.CardIronArmor);
+        public override CardAssetProfile AssetProfile => Art(Const.Paths.CardIronArmor);
 
         protected override async Task OnPlay(
             PlayerChoiceContext choiceContext,
@@ -26,6 +25,8 @@ namespace STS2_WineFox.Cards.Token
                 Owner.Creature, DynamicVars["Armor"].BaseValue, Owner.Creature, this);
         }
 
-        protected override void OnUpgrade() { }
+        protected override void OnUpgrade()
+        {
+        }
     }
 }

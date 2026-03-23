@@ -7,10 +7,7 @@ namespace STS2_WineFox.Relics
 {
     public class HandCrank : WineFoxRelic
     {
-        public override RelicAssetProfile AssetProfile => new(
-            Const.Paths.HandCrankRelicIcon,
-            Const.Paths.HandCrankRelicIcon,
-            Const.Paths.HandCrankRelicIcon);
+        public override RelicAssetProfile AssetProfile => Icons(Const.Paths.HandCrankRelicIcon);
 
         public override RelicRarity Rarity => RelicRarity.Starter;
 

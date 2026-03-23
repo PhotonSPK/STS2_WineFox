@@ -15,9 +15,7 @@ namespace STS2_WineFox.Cards.Rare
         protected override IEnumerable<DynamicVar> CanonicalVars =>
             [new("Steam", 1m)];
 
-        public override CardAssetProfile AssetProfile => new(
-            Const.Paths.CardSteamEngine,
-            Const.Paths.CardSteamEngine);
+        public override CardAssetProfile AssetProfile => Art(Const.Paths.CardSteamEngine);
 
         protected override async Task OnPlay(
             PlayerChoiceContext choiceContext,

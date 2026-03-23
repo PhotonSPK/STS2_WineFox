@@ -1,7 +1,6 @@
 ﻿using Godot;
 using MegaCrit.Sts2.Core.Entities.Characters;
 using STS2_WineFox.Cards.Basic;
-using STS2_WineFox.Cards.Common;
 using STS2_WineFox.Content.Descriptors;
 using STS2_WineFox.Relics;
 using STS2RitsuLib.Scaffolding.Characters;

@@ -14,11 +14,8 @@ namespace STS2_WineFox.Cards.Basic
         protected override HashSet<CardTag> CanonicalTags => [CardTag.Strike];
         protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(6m, ValueProp.Move)];
 
-        public override CardAssetProfile AssetProfile => new(
-            Const.Paths.CardWineFoxStrike,
-            Const.Paths.CardWineFoxStrike
-        );
-        
+        public override CardAssetProfile AssetProfile => Art(Const.Paths.CardWineFoxStrike);
+
         protected override async Task OnPlay(
             PlayerChoiceContext choiceContext,
             CardPlay play)

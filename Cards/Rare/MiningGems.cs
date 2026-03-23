@@ -1,5 +1,4 @@
-﻿using MegaCrit.Sts2.Core.Commands;
-using MegaCrit.Sts2.Core.Entities.Cards;
+﻿using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using STS2_WineFox.Powers;
@@ -11,12 +10,11 @@ namespace STS2_WineFox.Cards.Rare
     {
         protected override IEnumerable<DynamicVar> CanonicalVars =>
             [new("Diamond", 2m)];
+
         protected override IEnumerable<string> RegisteredKeywordIds =>
             [WineFoxKeywords.Diamond];
 
-        public override CardAssetProfile AssetProfile => new(
-            Const.Paths.CardMiningGems,
-            Const.Paths.CardMiningGems);
+        public override CardAssetProfile AssetProfile => Art(Const.Paths.CardMiningGems);
 
         protected override async Task OnPlay(
             PlayerChoiceContext choiceContext,
@@ -27,7 +25,7 @@ namespace STS2_WineFox.Cards.Rare
 
         protected override void OnUpgrade()
         {
-            DynamicVars["Diamond"].UpgradeValueBy(1m);// 2 → 3
+            DynamicVars["Diamond"].UpgradeValueBy(1m); // 2 → 3
         }
     }
 }

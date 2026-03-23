@@ -15,10 +15,7 @@ namespace STS2_WineFox.Cards.Basic
         protected override HashSet<CardTag> CanonicalTags => [CardTag.Defend];
         protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(5, ValueProp.Move)];
 
-        public override CardAssetProfile AssetProfile => new(
-            Const.Paths.CardWineFoxDefend,
-            Const.Paths.CardWineFoxDefend
-        );
+        public override CardAssetProfile AssetProfile => Art(Const.Paths.CardWineFoxDefend);
 
         protected override async Task OnPlay(
             PlayerChoiceContext choiceContext,

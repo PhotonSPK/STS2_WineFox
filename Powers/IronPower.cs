@@ -4,8 +4,6 @@ namespace STS2_WineFox.Powers
 {
     public class IronPower : MaterialPower
     {
-        public override PowerAssetProfile AssetProfile => new(
-            Const.Paths.IronPowerIcon,
-            Const.Paths.IronPowerIcon);
+        public override PowerAssetProfile AssetProfile => Icons(Const.Paths.IronPowerIcon);
     }
 }

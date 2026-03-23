@@ -6,13 +6,13 @@ namespace STS2_WineFox.Content.Descriptors
     internal static class WineFoxCharacterAssets
     {
         private static readonly CharacterAssetProfile BaseProfile = CharacterAssetProfiles.Ironclad();
+
         internal static CharacterAssetProfile Profile { get; } = BaseProfile
             .WithScenes(BaseProfile.Scenes! with
             {
                 VisualsPath = Const.Paths.CharacterVisualsScene,
                 // EnergyCounterPath = Const.Paths.CustomEnergyCounterPath,
                 RestSiteAnimPath = Const.Paths.CharacterRestSiteAnimScene,
-                
             })
             .WithUi(new(
                 Const.Paths.CharacterIcon,
