@@ -6,7 +6,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 using STS2_WineFox.Powers;
 using STS2RitsuLib.Scaffolding.Content;
 
-namespace STS2_WineFox.Cards.UnCommon
+namespace STS2_WineFox.Cards.Uncommon
 {
     public class PlantTrees() : WineFoxCard(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
     {

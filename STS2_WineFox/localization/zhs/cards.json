@@ -9,7 +9,7 @@
   "STS2_WINE_FOX_CARD_STONE_PICKAXE.description": "每次攻击时，额外获得 [blue]1[/blue] 个[gold]木板[/gold]和 [blue]1[/blue] 个[gold]圆石[/gold]。\n消耗 2 个[gold]木板[/gold]和 2 个[gold]圆石[/gold]。",
   "STS2_WINE_FOX_CARD_BASE_CRAFT.title": "基础合成",
   "STS2_WINE_FOX_CARD_BASE_CRAFT.description": "获得 {Block:diff()} 点格挡。根据拥有的[gold]木板[/gold]，[gold]圆石[/gold]，[gold]铁锭[/gold]层数，[gold]选择[/gold]获得一张卡牌并消耗对应材料。",
-  "STS2_WINE_FOX_CARD_FULL_ATTACK.title": "全力一击",
+  "STS2_WINE_FOX_CARD_FULL_ATTACK.title": "全力倾泻",
   "STS2_WINE_FOX_CARD_FULL_ATTACK.description": "消耗所有[gold]木板[/gold]和[gold]圆石[/gold]。\n每消耗1个对随机一名敌人造成{Damage}点伤害。(共造成{Hits:diff()}次伤害)",
   "STS2_WINE_FOX_CARD_MINING_GEMS.title": "挖掘宝石",
   "STS2_WINE_FOX_CARD_MINING_GEMS.description": "获得 {Diamond:diff()} 个[gold]钻石[/gold]。",

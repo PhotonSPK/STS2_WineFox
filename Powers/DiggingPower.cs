@@ -1,7 +1,7 @@
-﻿using MegaCrit.Sts2.Core.Entities.Cards;
+﻿using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using STS2_WineFox.Cards.Basic;
 using STS2RitsuLib.Scaffolding.Content;
 
 namespace STS2_WineFox.Powers
@@ -16,15 +16,14 @@ namespace STS2_WineFox.Powers
             Const.Paths.DiggingPowerIcon
         );
 
-        public override async Task AfterCardPlayed(
-            PlayerChoiceContext choiceContext,
-            CardPlay cardPlay)
+        public override async Task AfterPlayerTurnStart(
+            PlayerChoiceContext choiceContext, Player player)
         {
-            if (cardPlay.Card.Type == CardType.Attack 
-                && cardPlay.Card is not BasicMine)
-            {
-                await WineFoxActions.GainMaterials<WoodPower, StonePower>(cardPlay.Card, Amount, Amount);
-            }
+            if (player.Creature != Owner) return;
+
+            Flash();
+            await PowerCmd.Apply<WoodPower>(Owner, 1m, Owner, null);
+            await PowerCmd.Apply<StonePower>(Owner, 1m, Owner, null);
         }
     }
 }
