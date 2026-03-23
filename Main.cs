@@ -30,7 +30,6 @@ namespace STS2_WineFox
             {
                 RitsuLibFramework.EnsureGodotScriptsRegistered(Assembly.GetExecutingAssembly(), Logger);
                 WineFoxContentRegistrar.RegisterAll();
-                new Harmony(Const.ModId).PatchAll(Assembly.GetExecutingAssembly());
                 IsModActive = true;
                 Logger.Info("Mod initialization complete - Mod is now ACTIVE");
             }
