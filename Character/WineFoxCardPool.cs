@@ -38,6 +38,7 @@ namespace STS2_WineFox.Character
             typeof(PowerUp),
             typeof(IronZombie),
             typeof(CrushingWheel),
+            typeof(EnmergencyRepair),
             
             //Token
             typeof(StonePickaxe),
