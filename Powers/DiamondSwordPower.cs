@@ -10,8 +10,8 @@ namespace STS2_WineFox.Powers
 {
     public class DiamondSwordPower : WineFoxPower
     {
-        // private bool _isEchoing;
         private bool _diamondSwordPlayedThisTurn;
+        private bool _powerWasActiveAtTurnStart;
         private int _usedThisTurn;
 
         public override PowerType Type => PowerType.Buff;
@@ -22,6 +22,7 @@ namespace STS2_WineFox.Powers
         protected override Task OnAfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
         {
             if (player.Creature != Owner) return Task.CompletedTask;
+            _powerWasActiveAtTurnStart = Amount > 0;
             _usedThisTurn = 0;
             _diamondSwordPlayedThisTurn = false;
             return Task.CompletedTask;
@@ -35,12 +36,13 @@ namespace STS2_WineFox.Powers
             if (WineFoxActions.IsSwordEchoing) return;
             if (_usedThisTurn >= Amount) return;
 
-            if (cardPlay.Card is DiamondSword)
-                if (!_diamondSwordPlayedThisTurn)
-                {
-                    _diamondSwordPlayedThisTurn = true;
+            if (cardPlay.Card is DiamondSword && !_diamondSwordPlayedThisTurn)
+            {
+                _diamondSwordPlayedThisTurn = true;
+                if (!_powerWasActiveAtTurnStart)
                     return;
-                }
+                
+            }
 
             _usedThisTurn++;
             WineFoxActions.IsSwordEchoing = true;
