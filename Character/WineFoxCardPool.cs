@@ -34,6 +34,7 @@ namespace STS2_WineFox.Character
             typeof(MechanicalDrill),
             typeof(MechanicalSaw),
             typeof(AlterPath),
+            
             //Token
             typeof(StonePickaxe),
             typeof(StoneSword),
@@ -42,6 +43,7 @@ namespace STS2_WineFox.Character
             typeof(IronPickaxe),
             typeof(DiamondSword),
             typeof(IronSword),
+            typeof(StoneArmor)
         ];
     }
 }

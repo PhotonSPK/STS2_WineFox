@@ -83,6 +83,10 @@ namespace STS2_WineFox.Cards
                 new CraftCost(typeof(IronPower), 2m),
                 new CraftCost(typeof(WoodPower), 1m)
             ),
+            //石甲
+            new((state, owner) => state.CreateCard<StoneArmor>(owner),
+                new CraftCost(typeof(StonePower), 8m)
+            ),
         ];
 
         public static IReadOnlyList<CraftOption> CreateOptions(CombatState state, Player owner)

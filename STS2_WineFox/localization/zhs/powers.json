@@ -8,7 +8,7 @@
   "STS2_WINE_FOX_POWER_STRESS_POWER.title": "应力",
   "STS2_WINE_FOX_POWER_STRESS_POWER.description": "获得物资时，消耗[blue]1[/blue]层，使该次获得的物资翻倍。",
   "STS2_WINE_FOX_POWER_STRESS_POWER.smartDescription": "获得物资时，消耗[blue]1[/blue]层，使该次获得的物资翻倍。",
-  "STS2_WINE_FOX_POWER_DIGGING_POWER.title": "挖掘",
+  "STS2_WINE_FOX_POWER_DIGGING_POWER.title": "工具：石镐",
   "STS2_WINE_FOX_POWER_DIGGING_POWER.description": "每回合开始时，获得[blue]{Amount}[/blue]个[gold]木板[/gold]和[blue]{Amount}[/blue]个[gold]圆石[/gold]。",
   "STS2_WINE_FOX_POWER_DIGGING_POWER.smartDescription": "每回合开始时，获得[blue]{Amount}[/blue]个[gold]木板[/gold]和[blue]{Amount}[/blue]个[gold]圆石[/gold]。",
   "STS2_WINE_FOX_POWER_STONE_POWER.title": "圆石",
@@ -26,7 +26,7 @@
   "STS2_WINE_FOX_POWER_WOODEN_SWORD_POWER.title": "武器:木剑",
   "STS2_WINE_FOX_POWER_WOODEN_SWORD_POWER.description": "每回合开始时获得 [blue]4[/blue] 层[gold]活力[/gold]。",
   "STS2_WINE_FOX_POWER_WOODEN_SWORD_POWER.smartDescription": "每回合开始时获得 [blue]4[/blue] 层[gold]活力[/gold]。还剩 [blue]{Amount}[/blue] 回合。",
-  "STS2_WINE_FOX_POWER_IRON_PICKAXE_POWER.title": "铁镐",
+  "STS2_WINE_FOX_POWER_IRON_PICKAXE_POWER.title": "工具：铁镐",
   "STS2_WINE_FOX_POWER_IRON_PICKAXE_POWER.description": "从牌中获得资源时，额外获得 [blue]2[/blue] 个[gold]铁锭[/gold]。",
   "STS2_WINE_FOX_POWER_IRON_PICKAXE_POWER.smartDescription": "从牌中获得资源时，额外获得 [blue]2[/blue] 个[gold]铁锭[/gold]。还剩 [blue]{Amount}[/blue] 次。",
   "STS2_WINE_FOX_POWER_DIAMOND_POWER.title": "钻石",
@@ -37,7 +37,10 @@
   "STS2_WINE_FOX_POWER_DIAMOND_SWORD_POWER.smartDescription": "每回合前 [blue]{Amount}[/blue] 张攻击牌额外打出一次。",
   "STS2_WINE_FOX_POWER_IRON_SWORD_POWER.title": "武器：铁剑",
   "STS2_WINE_FOX_POWER_IRON_SWORD_POWER.description": "接下来 [blue]{Amount}[/blue] 张攻击牌额外打出一次。",
-  "STS2_WINE_FOX_POWER_IRON_SWORD_POWER.smartDescription": "接下来 [blue]{Amount}[/blue] 张攻击牌额外打出一次。"
+  "STS2_WINE_FOX_POWER_IRON_SWORD_POWER.smartDescription": "接下来 [blue]{Amount}[/blue] 张攻击牌额外打出一次。",
+  "STS2_WINE_FOX_POWER_STONE_ARMOR_POWER.title": "装备：砖石甲",
+  "STS2_WINE_FOX_POWER_STONE_ARMOR_POWER.description": "当你的回合开始时失去 [blue]1[/blue] 点敏捷。",
+  "STS2_WINE_FOX_POWER_STONE_ARMOR_POWER.smartDescription": "当你的回合开始时失去 [blue]{Amount}[/blue] 点敏捷。"
   
   
   

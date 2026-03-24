@@ -52,7 +52,7 @@ namespace STS2_WineFox
             public const string IronPickaxePowerIcon = Root + "/powers/iron_pickaxe_power.png";
             public const string DiamondPowerIcon = Root + "/powers/diamond_power.png";
             public const string DiamondSwordPowerIcon = Root + "/powers/diamond_sword_power.png";
-
+            public const string StoneArmorPowerIcon = Root + "/powers/stone_armor_power.png";
             public const string IronSwordPowerIcon = Root + "/powers/iron_sword_power.png";
 
             //Card
@@ -74,6 +74,7 @@ namespace STS2_WineFox
             public const string CardMechanicalSaw = Root + "/cards/card_mechanicalsaw.png";
             public const string CardIronSword = Root + "/cards/card_ironsword.png";
             public const string CardAlterPath =  Root + "/cards/card_alterpath.png";
+            public const string CardStoneArmor = Root + "/cards/card_stonearmor.png";
         }
 
         public static class Audio

@@ -12,7 +12,7 @@ namespace STS2_WineFox.Cards.Token
         false, false)
     {
         protected override IEnumerable<DynamicVar> CanonicalVars =>
-            [new("Armor", 5m)];
+            [new("Armor", 7m)];
 
         public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
         public override CardAssetProfile AssetProfile => Art(Const.Paths.CardIronArmor);
@@ -27,6 +27,7 @@ namespace STS2_WineFox.Cards.Token
 
         protected override void OnUpgrade()
         {
+            
         }
     }
 }
