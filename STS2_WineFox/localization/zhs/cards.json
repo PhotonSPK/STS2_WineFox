@@ -39,7 +39,9 @@
   "STS2_WINE_FOX_CARD_STONE_ARMOR.title": "砖石甲",
   "STS2_WINE_FOX_CARD_STONE_ARMOR.description": "获得 7 层[gold]覆甲[/gold]，回合开始时失去 1 点敏捷。\n(8个[gold]圆石[/gold])",
   "STS2_WINE_FOX_CARD_POWER_UP.title": "换挡，加速，起飞",
-    "STS2_WINE_FOX_CARD_POWER_UP.description": "获得 {Stress:diff()} 层应力。抽 {Cards:diff()} 张牌。"
+  "STS2_WINE_FOX_CARD_POWER_UP.description": "获得 {Stress:diff()} 层应力。抽 {Cards:diff()} 张牌。",
+  "STS2_WINE_FOX_CARD_IRON_ZOMBIE.title": "\"白色僵尸\"",
+  "STS2_WINE_FOX_CARD_IRON_ZOMBIE.description": "造成 {Damage:diff()} 点伤害，获得 [blue]{Iron:diff()}[/blue] 个铁锭。"
   
   
   

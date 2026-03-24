@@ -76,6 +76,7 @@ namespace STS2_WineFox
             public const string CardAlterPath =  Root + "/cards/card_alterpath.png";
             public const string CardStoneArmor = Root + "/cards/card_stonearmor.png";
             public const string CardPowerUp = Root + "/cards/card_powerup.png";
+            public const string CardIronZombie = Root + "/cards/card_ironzombie.png";
             
         }
 
