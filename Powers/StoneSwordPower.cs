@@ -7,13 +7,9 @@ using STS2RitsuLib.Scaffolding.Content;
 
 namespace STS2_WineFox.Powers
 {
-    /// <summary>
-    ///     石剑的衰减倒计时。Amount = 剩余回合数（2 → 1 → 移除）。
-    ///     实际力量加/减通过游戏原生 StrengthPower 完成。
-    /// </summary>
     public class StoneSwordPower : WineFoxPower
     {
-        public override PowerType Type => PowerType.Buff;
+        public override PowerType Type => PowerType.Debuff;
         public override PowerStackType StackType => PowerStackType.Counter;
 
         public override PowerAssetProfile AssetProfile => Icons(Const.Paths.StoneSwordPowerIcon);
@@ -24,9 +20,7 @@ namespace STS2_WineFox.Powers
             if (player.Creature != Owner) return;
 
             Flash();
-            // 通过原生 StrengthPower 扣减 2 点力量
             await PowerCmd.Apply<StrengthPower>(Owner, -2m, Owner, null);
-            // 倒计时 -1
             await PowerCmd.ModifyAmount(this, -1m, null, null);
 
             if (Amount <= 0m)

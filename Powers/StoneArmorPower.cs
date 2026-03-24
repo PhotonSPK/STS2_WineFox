@@ -9,7 +9,7 @@ namespace STS2_WineFox.Powers
 {
     public class StoneArmorPower : WineFoxPower
     {
-        public override PowerType Type => PowerType.Buff;
+        public override PowerType Type => PowerType.Debuff;
         public override PowerStackType StackType => PowerStackType.Counter;
 
         public override PowerAssetProfile AssetProfile => Icons(Const.Paths.StoneArmorPowerIcon);

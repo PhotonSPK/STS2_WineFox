@@ -14,7 +14,7 @@ namespace STS2_WineFox.Relics
         public override async Task BeforeCombatStart()
         {
             Flash();
-            await PowerCmd.Apply<StressPower>(Owner.Creature, 1m, Owner.Creature, null);
+            await PowerCmd.Apply<StressPower>(Owner.Creature, 2m, Owner.Creature, null);
         }
     }
 }
