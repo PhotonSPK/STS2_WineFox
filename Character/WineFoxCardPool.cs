@@ -35,6 +35,7 @@ namespace STS2_WineFox.Character
             typeof(MechanicalDrill),
             typeof(MechanicalSaw),
             typeof(AlterPath),
+            typeof(PowerUp),
             
             //Token
             typeof(StonePickaxe),
