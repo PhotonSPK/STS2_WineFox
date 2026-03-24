@@ -9,7 +9,7 @@ using STS2RitsuLib.Scaffolding.Content;
 namespace STS2_WineFox.Cards.Common;
 
 public class IronZombie() : WineFoxCard(
-    1, CardType.Skill, CardRarity.Common, TargetType.AnyEnemy)
+    1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars =>
         [new DamageVar(5m, ValueProp.Move),new("Iron", 1m)];
