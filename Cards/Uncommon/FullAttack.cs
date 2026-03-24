@@ -53,7 +53,7 @@ namespace STS2_WineFox.Cards.Uncommon
                 await PowerCmd.ModifyAmount(stonePower, -(decimal)stoneAmount, null, this);
             WineFoxActions.MaterialConsumeCountThisTurn++;
 
-            await DamageCmd.Attack(DynamicVars["Damage"].BaseValue) // ← .Damage → ["Damage"]
+            await DamageCmd.Attack(DynamicVars["Damage"].BaseValue)
                 .WithHitCount(totalHits)
                 .FromCard(this)
                 .TargetingRandomOpponents(combatState)

@@ -12,6 +12,8 @@ namespace STS2_WineFox.Cards.Common;
 public class LightAssault() : WineFoxCard(
     1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
 {
+    protected override IEnumerable<string> RegisteredKeywordIds =>
+        [WineFoxKeywords.Material];
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
         ModCardVars.Computed("Damage", 14m, CalcDamage)

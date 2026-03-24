@@ -12,8 +12,8 @@ namespace STS2_WineFox.Cards.Common
     {
         public override bool GainsBlock => true;
 
-        // protected override IEnumerable<string> RegisteredKeywordIds =>
-        //     [WineFoxKeywords.Plant, WineFoxKeywords.Wood];
+        protected override IEnumerable<string> RegisteredKeywordIds =>
+            [WineFoxKeywords.Wood];
 
         protected override IEnumerable<DynamicVar> CanonicalVars =>
             [new BlockVar(5, ValueProp.Move), new("Plant", 4m)];

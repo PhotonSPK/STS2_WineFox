@@ -85,6 +85,7 @@ namespace STS2_WineFox.Content.Descriptors
                 "res://images/powers/strength_power.png"),
             KeywordRegistrationEntry.Card(WineFoxKeywords.Plating, "STS2_WINEFOX-PLATING",
                 "res://images/powers/plating_power.png"),
+            KeywordRegistrationEntry.Card(WineFoxKeywords.Material, "STS2_WINEFOX-MATERIAL")
         ];
     }
 }
