@@ -80,6 +80,7 @@ namespace STS2_WineFox
             public const string CardIronZombie = Root + "/cards/card_ironzombie.png";
             public const string CardCrushingWheel = Root + "/cards/card_crushingwheel.png";
             public const string CardEnmergencyRepair = Root + "/cards/card_test.png";
+            public const string CardLightAssault = Root + "/cards/card_test.png";
             
         }
 

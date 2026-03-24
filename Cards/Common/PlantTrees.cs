@@ -6,9 +6,9 @@ using MegaCrit.Sts2.Core.ValueProps;
 using STS2_WineFox.Powers;
 using STS2RitsuLib.Scaffolding.Content;
 
-namespace STS2_WineFox.Cards.Uncommon
+namespace STS2_WineFox.Cards.Common
 {
-    public class PlantTrees() : WineFoxCard(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
+    public class PlantTrees() : WineFoxCard(1, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
         public override bool GainsBlock => true;
 
@@ -32,6 +32,7 @@ namespace STS2_WineFox.Cards.Uncommon
         protected override void OnUpgrade()
         {
             DynamicVars["Block"].UpgradeValueBy(2m); // 5 → 7
+            DynamicVars["Plant"].UpgradeValueBy(2m);
         }
     }
 }

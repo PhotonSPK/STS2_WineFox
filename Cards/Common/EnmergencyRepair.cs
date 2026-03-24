@@ -18,7 +18,7 @@ public class EnmergencyRepair() : WineFoxCard(
         [WineFoxKeywords.Stress];
     
     protected override IEnumerable<DynamicVar> CanonicalVars =>
-        [new DamageVar(5m, ValueProp.Move),new BlockVar(5, ValueProp.Move), new("Repair", 2m)];
+        [new DamageVar(9m, ValueProp.Move),new BlockVar(7, ValueProp.Move), new("Repair", 2m)];
 
     public override CardAssetProfile AssetProfile => Art(Const.Paths.CardEnmergencyRepair);
 
