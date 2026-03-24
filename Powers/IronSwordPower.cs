@@ -1,8 +1,8 @@
 ﻿using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
-using MegaCrit.Sts2.Core.Entities.Players;
+using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
-using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.Models;
 using STS2_WineFox.Cards.Token;
 using STS2RitsuLib.Scaffolding.Content;
 
@@ -10,45 +10,22 @@ namespace STS2_WineFox.Powers
 {
     public class IronSwordPower : WineFoxPower
     {
-        private bool _ironSwordPlayedThisTurn;
-
         public override PowerType Type => PowerType.Buff;
         public override PowerStackType StackType => PowerStackType.Counter;
 
         public override PowerAssetProfile AssetProfile => Icons(Const.Paths.IronSwordPowerIcon);
 
-        protected override Task OnAfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
+        public override int ModifyCardPlayCount(CardModel card, Creature? target, int playCount)
         {
-            if (player.Creature != Owner) return Task.CompletedTask;
-            _ironSwordPlayedThisTurn = false; // 每回合重置，避免跨回合误判
-            return Task.CompletedTask;
+            return card.Owner.Creature != Owner || card.Type is not CardType.Attack || card is IronSword
+                ? playCount
+                : playCount + 1;
         }
 
-        public override async Task AfterCardPlayed(
-            PlayerChoiceContext choiceContext, CardPlay cardPlay)
+        public override async Task AfterModifyingCardPlayCount(CardModel card)
         {
-            if (cardPlay.Card.Owner?.Creature != Owner) return;
-            if (cardPlay.Card.Type != CardType.Attack) return;
-            if (WineFoxActions.IsSwordEchoing) return;
-            if (Amount <= 0m) return;
-
-            // 铁剑本回合第一次打出时不回响自身
-            if (cardPlay.Card is IronSword)
-                if (!_ironSwordPlayedThisTurn)
-                {
-                    _ironSwordPlayedThisTurn = true;
-                    return;
-                }
-
-            WineFoxActions.IsSwordEchoing = true;
-            Flash();
-            await CardCmd.AutoPlay(choiceContext, cardPlay.Card, cardPlay.Target);
-            WineFoxActions.IsSwordEchoing = false;
-
-            // 消耗一次回响次数，归零后移除
-            await PowerCmd.ModifyAmount(this, -1m, null, null);
-            if (Amount <= 0m)
-                await PowerCmd.Remove(this);
+            if (card is IronSword) return;
+            await PowerCmd.Decrement(this);
         }
     }
 }
