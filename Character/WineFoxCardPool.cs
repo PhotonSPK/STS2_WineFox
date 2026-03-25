@@ -41,6 +41,8 @@ namespace STS2_WineFox.Character
             typeof(EnmergencyRepair),
             typeof(LightAssault),
             typeof(EasyPeasy),
+            typeof(LessHoliday),
+            typeof(AllItem),
             
             //Token
             typeof(StonePickaxe),

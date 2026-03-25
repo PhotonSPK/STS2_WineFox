@@ -3,6 +3,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.ValueProps;
 using STS2_WineFox.Powers;
 using STS2RitsuLib.Cards.DynamicVars;
 using STS2RitsuLib.Scaffolding.Content;
@@ -16,7 +17,7 @@ namespace STS2_WineFox.Cards.Uncommon
 
         protected override IEnumerable<DynamicVar> CanonicalVars =>
         [
-            ModCardVars.Computed("Damage", 4m, CalcDamage),
+            new DamageVar(4m, ValueProp.Move),
             ModCardVars.Computed("Hits", 0m, CalcHits),
         ];
 
@@ -64,20 +65,6 @@ namespace STS2_WineFox.Cards.Uncommon
         protected override void OnUpgrade()
         {
             AddKeyword(CardKeyword.Retain);
-        }
-
-        private static decimal CalcDamage(CardModel? card)
-        {
-            if (card == null) return 4m;
-            if (!card.DynamicVars.TryGetValue("Damage", out var dynamicVar)) return 4m;
-
-            var creature = card._owner?.Creature;
-            if (creature == null) return dynamicVar.BaseValue;
-
-            var hits = CalcHits(card);
-            return hits > 0
-                ? dynamicVar.BaseValue * hits
-                : dynamicVar.BaseValue;
         }
 
         private static decimal CalcHits(CardModel? card)
