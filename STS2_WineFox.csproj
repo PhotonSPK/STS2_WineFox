@@ -11,7 +11,6 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <Sts2DataDir>$(Sts2Dir)\data_sts2_windows_x86_64</Sts2DataDir>
         <GodotExportPreset>BasicExport</GodotExportPreset>
         <ModOutputDir>$(Sts2Dir)\mods\$(MSBuildProjectName)\</ModOutputDir>
         <ModPckPath>$(ModOutputDir)$(MSBuildProjectName).pck</ModPckPath>
@@ -55,7 +54,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="STS2-RitsuLib\STS2-RitsuLib.csproj" />
+      <ProjectReference Include="$(RitsuLibDir)\STS2-RitsuLib.csproj" />
     </ItemGroup>
 
     <Target Name="Copy Mod" AfterTargets="PostBuildEvent">
