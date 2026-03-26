@@ -1,5 +1,4 @@
-﻿using MegaCrit.Sts2.Core.Combat;
-using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Models;
@@ -25,19 +24,6 @@ namespace STS2_WineFox.Cards
             }
 
             return true;
-        }
-
-        public async Task ConsumeMaterials(CardModel card)
-        {
-            WineFoxActions.MaterialConsumeCountThisTurn++;
-            
-            var owner = card.Owner.Creature;
-            foreach (var cost in Costs)
-            {
-                var power = owner.Powers.FirstOrDefault(p => p.GetType() == cost.PowerType);
-                if (power != null)
-                    await PowerCmd.ModifyAmount(power, -cost.Amount, null, card);
-            }
         }
     }
 
@@ -72,7 +58,7 @@ namespace STS2_WineFox.Cards
             new(
                 (state, owner) => state.CreateCard<IronPickaxe>(owner),
                 new CraftCost(typeof(IronPower), 3m),
-                new CraftCost(typeof(WoodenSword), 1m)
+                new CraftCost(typeof(WoodPower), 1m)
             ),
             //钻石剑
             new(
@@ -90,16 +76,5 @@ namespace STS2_WineFox.Cards
                 new CraftCost(typeof(StonePower), 8m)
             ),
         ];
-
-        public static IReadOnlyList<CraftOption> CreateOptions(CombatState state, Player owner)
-        {
-            ArgumentNullException.ThrowIfNull(state);
-            ArgumentNullException.ThrowIfNull(owner);
-
-            return All
-                .Where(recipe => recipe.CanCraft(owner.Creature))
-                .Select(recipe => new CraftOption(recipe, recipe.Factory(state, owner)))
-                .ToList();
-        }
     }
 }

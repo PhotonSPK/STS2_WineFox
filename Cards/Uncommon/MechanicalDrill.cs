@@ -1,6 +1,7 @@
 ﻿using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using STS2_WineFox.Commands;
 using STS2_WineFox.Powers;
 using STS2RitsuLib.Scaffolding.Content;
 
@@ -26,7 +27,7 @@ namespace STS2_WineFox.Cards.Uncommon
                 .FirstOrDefault(p => (decimal)p.Amount > 0);
 
             // 获得 2 铁
-            await WineFoxActions.GainMaterial<IronPower>(this, DynamicVars["Iron"].BaseValue);
+            await MaterialCmd.GainMaterial<IronPower>(this, DynamicVars["Iron"].BaseValue);
 
             // 有应力则返还 2 费用
             if (stressPower != null) Owner.PlayerCombatState?.Energy += 2;

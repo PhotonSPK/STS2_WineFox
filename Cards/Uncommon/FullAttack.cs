@@ -4,6 +4,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
+using STS2_WineFox.Commands;
 using STS2_WineFox.Powers;
 using STS2RitsuLib.Cards.DynamicVars;
 using STS2RitsuLib.Scaffolding.Content;
@@ -52,7 +53,7 @@ namespace STS2_WineFox.Cards.Uncommon
                 await PowerCmd.ModifyAmount(woodPower, -(decimal)woodAmount, null, this);
             if (stonePower != null && stoneAmount > 0)
                 await PowerCmd.ModifyAmount(stonePower, -(decimal)stoneAmount, null, this);
-            WineFoxActions.MaterialConsumeCountThisTurn++;
+            CraftCmd.RecordMaterialConsume(owner);
 
             await DamageCmd.Attack(DynamicVars["Damage"].BaseValue)
                 .WithHitCount(totalHits)

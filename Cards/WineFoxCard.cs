@@ -1,4 +1,7 @@
 ﻿using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Entities.Players;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using STS2_WineFox.Commands;
 using STS2RitsuLib.Scaffolding.Content;
 
 namespace STS2_WineFox.Cards
@@ -11,6 +14,14 @@ namespace STS2_WineFox.Cards
         bool showInCardLibrary = true,
         bool autoAdd = true) : ModCardTemplate(baseCost, type, rarity, target, showInCardLibrary, autoAdd)
     {
+        public sealed override Task AfterPlayerTurnStartEarly(PlayerChoiceContext choiceContext, Player player)
+        {
+            if (Owner == player)
+                CraftCmd.ObserveTurnStarted(choiceContext, player);
+
+            return Task.CompletedTask;
+        }
+
         protected static CardAssetProfile Art(string portraitPath)
         {
             return new(portraitPath, portraitPath);
