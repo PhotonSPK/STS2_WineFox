@@ -9,7 +9,7 @@ using STS2RitsuLib.Scaffolding.Content;
 namespace STS2_WineFox.Cards.Token
 {
     public class StonePickaxe() : WineFoxCard(0, CardType.Power,
-        CardRarity.Token, TargetType.Self, false, false)
+        CardRarity.Token, TargetType.Self, false)
     {
         public override CardAssetProfile AssetProfile => Art(Const.Paths.CardStonePickaxe);
 

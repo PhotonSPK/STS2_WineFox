@@ -9,8 +9,7 @@ using STS2RitsuLib.Scaffolding.Content;
 namespace STS2_WineFox.Cards.Token
 {
     public class StoneSword() : WineFoxCard(
-        0, CardType.Attack, CardRarity.Token, TargetType.AnyEnemy,
-        false, false)
+        0, CardType.Attack, CardRarity.Token, TargetType.AnyEnemy)
     {
         protected override IEnumerable<DynamicVar> CanonicalVars =>
             [new DamageVar(9m, ValueProp.Move), new PowerVar<StrengthPower>(1m)];

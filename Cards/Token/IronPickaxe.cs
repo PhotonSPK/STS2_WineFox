@@ -8,8 +8,7 @@ using STS2RitsuLib.Scaffolding.Content;
 namespace STS2_WineFox.Cards.Token
 {
     public class IronPickaxe() : WineFoxCard(
-        0, CardType.Skill, CardRarity.Token, TargetType.Self,
-        false, false)
+        0, CardType.Skill, CardRarity.Token, TargetType.Self)
     {
         protected override IEnumerable<DynamicVar> CanonicalVars =>
             [new("Times", 2m)];

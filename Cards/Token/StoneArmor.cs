@@ -10,7 +10,7 @@ namespace STS2_WineFox.Cards.Token;
 
 public class StoneArmor() : WineFoxCard(
     0, CardType.Skill, CardRarity.Token, TargetType.None,
-    false, false)
+    false)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars =>
         [new("Armor", 7m), new("StoneArmor", 1m)];
