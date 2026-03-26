@@ -43,6 +43,7 @@ namespace STS2_WineFox.Character
             typeof(EasyPeasy),
             typeof(LessHoliday),
             typeof(AllItem),
+            typeof(RiclearPowerPlant),
             
             //Token
             typeof(StonePickaxe),

@@ -53,5 +53,7 @@
   "STS2_WINE_FOX_CARD_ALL_ITEM.title": "全物品仓库",
   "STS2_WINE_FOX_CARD_ALL_ITEM.description": "获得 1 点能量。抽 1 张卡。获得木头，圆石，铁，钻石各 1 个。",
   "STS2_WINE_FOX_CARD_LESS_HOLIDAY.title": "996",
-  "STS2_WINE_FOX_CARD_LESS_HOLIDAY.description": "每回合开始时获得 {Steam:diff()} [gold]应力[/gold]。"
+  "STS2_WINE_FOX_CARD_LESS_HOLIDAY.description": "每回合开始时获得 {Steam:diff()} [gold]应力[/gold]。",
+  "STS2_WINE_FOX_CARD_RICLEAR_POWER_PLANT.title": "河电站",
+  "STS2_WINE_FOX_CARD_RICLEAR_POWER_PLANT.description": "获得 {Block:diff()} 点格挡，获得 2 应力。"
 }
