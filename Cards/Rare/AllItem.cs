@@ -1,5 +1,4 @@
 ﻿using MegaCrit.Sts2.Core.Commands;
-using MegaCrit.Sts2.Core.Context;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
@@ -13,7 +12,7 @@ namespace STS2_WineFox.Cards.Rare
         protected override IEnumerable<string> RegisteredKeywordIds =>
             [WineFoxKeywords.Wood,WineFoxKeywords.Stone,WineFoxKeywords.Iron,WineFoxKeywords.Diamond];
         
-        public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Innate];
+        public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
 
         protected override IEnumerable<DynamicVar> CanonicalVars =>
             [new EnergyVar(1),new CardsVar(1),new("Wood", 1m),new DynamicVar("Stone",1m),new DynamicVar("Iron",1m),new DynamicVar("Diamond",1m)];
@@ -41,7 +40,7 @@ namespace STS2_WineFox.Cards.Rare
 
         protected override void OnUpgrade()
         {
-            AddKeyword(CardKeyword.Retain);
+            AddKeyword(CardKeyword.Innate);
         }
     }
 }

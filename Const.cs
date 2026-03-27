@@ -94,6 +94,10 @@ namespace STS2_WineFox
             public const string CardWoodenArmor = Root + "/cards/card_woodenarmor.png";
             public const string CardNetheritePickaxe = Root + "/cards/card_netherite_pickaxe.png";
             public const string CardCobblestoneGenerator = Root + "/cards/card_test.png";
+            public const string CardShieldAttack = Root + "/cards/card_test.png";
+            public const string CardSpinningHand = Root + "/cards/card_test.png";
+            public const string CardProductionDocument = Root + "/cards/card_test.png";
+            public const string CardMilk = Root + "/cards/card_test.png";
         }
 
         public static class Audio

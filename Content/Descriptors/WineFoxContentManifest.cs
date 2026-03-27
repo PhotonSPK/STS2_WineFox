@@ -46,6 +46,11 @@ namespace STS2_WineFox.Content.Descriptors
             new CardRegistrationEntry<WineFoxCardPool, Alternator>(),
             new CardRegistrationEntry<WineFoxCardPool, NetheritePickaxe>(),
             new CardRegistrationEntry<WineFoxCardPool, CobblestoneGenerator>(),
+            new CardRegistrationEntry<WineFoxCardPool, ShieldAttack>(),
+            new CardRegistrationEntry<WineFoxCardPool, SpinningHand>(),
+            new CardRegistrationEntry<WineFoxCardPool, ProductionDocument>(),
+            new CardRegistrationEntry<WineFoxCardPool, RecordPlayer>(),
+            new CardRegistrationEntry<WineFoxCardPool, Milk>(),
             
             //TokenCardPool
             new CardRegistrationEntry<WineFoxTokenCardPool, StonePickaxe>(),
