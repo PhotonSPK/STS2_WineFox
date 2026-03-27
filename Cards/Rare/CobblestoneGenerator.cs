@@ -9,7 +9,7 @@ using STS2RitsuLib.Scaffolding.Content;
 namespace STS2_WineFox.Cards.Rare;
 
 public class CobblestoneGenerator() : WineFoxCard(
-    3, CardType.Power, CardRarity.Rare, TargetType.Self)
+    2, CardType.Power, CardRarity.Rare, TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars =>
         [new ("BrushStoneFormPower",1m)];
