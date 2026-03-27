@@ -16,12 +16,14 @@ public class EasyPeasy() : WineFoxCard(
     public override CardAssetProfile AssetProfile => Art(Const.Paths.CardEasyPeasy);
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
-        [new ("EasyPeasy", 1m), new ("RadiationLeak", 1m)];
+        [new ("EasyPeasy", 1m), new ("RadiationLeak", 1m),new EnergyVar(1)];
     
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
+        DynamicVars.Energy.BaseValue = DynamicVars["EasyPeasy"].BaseValue;
+        
         await PowerCmd.Apply<EasyPeasyPower>(
             Owner.Creature,  DynamicVars["EasyPeasy"].BaseValue, Owner.Creature, this);
         await PowerCmd.Apply<RadiationLeakPower>(
@@ -31,5 +33,6 @@ public class EasyPeasy() : WineFoxCard(
     protected override void OnUpgrade()
     {
         DynamicVars["EasyPeasy"].UpgradeValueBy(1m);
+        DynamicVars.Energy.UpgradeValueBy(1m);
     }
 }

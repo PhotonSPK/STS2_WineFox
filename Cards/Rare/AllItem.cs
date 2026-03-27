@@ -8,7 +8,7 @@ using STS2RitsuLib.Scaffolding.Content;
 
 namespace STS2_WineFox.Cards.Rare
 {
-    public class AllItem() : WineFoxCard(2, CardType.Power, CardRarity.Rare, TargetType.Self)
+    public class AllItem() : WineFoxCard(0, CardType.Power, CardRarity.Rare, TargetType.Self)
     {
         protected override IEnumerable<string> RegisteredKeywordIds =>
             [WineFoxKeywords.Wood,WineFoxKeywords.Stone,WineFoxKeywords.Iron,WineFoxKeywords.Diamond];

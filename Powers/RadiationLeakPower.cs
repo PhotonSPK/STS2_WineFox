@@ -30,6 +30,9 @@ public class RadiationLeakPower : WineFoxPower
             CardCmd.PreviewCardPileAdd(cardInstance);
         }
         
-        await PowerCmd.Apply<RadiationLeakPower>(Owner, 1m, Owner, null);
+        if (Amount < 10)
+        {
+            await PowerCmd.Apply<RadiationLeakPower>(Owner, 1m, Owner, null);
+        }
     }
 }

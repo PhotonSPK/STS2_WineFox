@@ -33,6 +33,8 @@ namespace STS2_WineFox.Cards
     {
         public static readonly IReadOnlyList<CraftRecipe> All =
         [
+            //空手打击
+            new((state, owner) => state.CreateCard<Nothing>(owner)),
             //石镐
             new(
                 (state, owner) => state.CreateCard<StonePickaxe>(owner),

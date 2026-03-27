@@ -6,10 +6,10 @@ using MegaCrit.Sts2.Core.ValueProps;
 using STS2_WineFox.Powers;
 using STS2RitsuLib.Scaffolding.Content;
 
-namespace STS2_WineFox.Cards.Common;
+namespace STS2_WineFox.Cards.Uncommon;
 
 public class EnmergencyRepair() : WineFoxCard(
-    2, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
+    2, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
 {
     public override bool GainsBlock => true;
     protected override HashSet<CardTag> CanonicalTags => [CardTag.Defend];
