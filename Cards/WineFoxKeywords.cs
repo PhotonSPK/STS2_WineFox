@@ -18,6 +18,7 @@ namespace STS2_WineFox.Cards
         public const string Material =  "material";
         public const string RadiationLeak = "radiation_leak";
         public const string EasyPeasy = "easypeasy";
+        public const string Craft = "craft";
 
         extension(CardModel card)
         {

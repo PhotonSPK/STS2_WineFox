@@ -19,7 +19,7 @@ polygon = PackedVector2Array(-74, 0, -58, -10, -28, -18, 0, -20, 28, -18, 58, -1
 
 [node name="Portrait" type="Sprite2D" parent="Visuals"]
 position = Vector2(0, -122)
-scale = Vector2(0.35, 0.35)
+scale = Vector2(0.32, 0.32)
 texture = ExtResource("2_portrait")
 
 [node name="Bounds" type="Control" parent="."]

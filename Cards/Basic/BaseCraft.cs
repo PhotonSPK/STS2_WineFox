@@ -11,7 +11,7 @@ namespace STS2_WineFox.Cards.Basic
     public class BaseCraft() : WineFoxCard(1, CardType.Skill, CardRarity.Basic, TargetType.Self)
     {
         protected override IEnumerable<string> RegisteredKeywordIds =>
-            [WineFoxKeywords.Wood, WineFoxKeywords.Stone];
+            [WineFoxKeywords.Craft, WineFoxKeywords.Material];
 
         public override bool GainsBlock => true;
 

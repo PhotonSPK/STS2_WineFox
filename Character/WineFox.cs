@@ -12,6 +12,7 @@ namespace STS2_WineFox.Character
         public static readonly Color Color = new("ffaf50");
 
         public override Color NameColor => Color;
+        public override Color MapDrawingColor => Colors.Orange;
         public override int StartingHp => 80;
         public override int StartingGold => 99;
         public override CharacterGender Gender => CharacterGender.Neutral;

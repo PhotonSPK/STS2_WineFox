@@ -35,6 +35,16 @@ namespace STS2_WineFox.Cards
         [
             //空手打击
             new((state, owner) => state.CreateCard<Nothing>(owner)),
+            
+            //木镐
+            new((state, owner) => state.CreateCard<WoodenPickaxe>(owner),
+                new CraftCost(typeof(WoodPower), 4m)
+            ),
+            //木剑
+            new((state, owner) => state.CreateCard<WoodenSword>(owner),
+                new CraftCost(typeof(WoodPower), 3m)
+            ),
+            
             //石镐
             new(
                 (state, owner) => state.CreateCard<StonePickaxe>(owner),
@@ -47,25 +57,15 @@ namespace STS2_WineFox.Cards
                 new CraftCost(typeof(WoodPower), 1m),
                 new CraftCost(typeof(StonePower), 2m)
             ),
-            //铁甲
-            new(
-                (state, owner) => state.CreateCard<IronArmor>(owner),
-                new CraftCost(typeof(IronPower), 8m)
+            //石甲
+            new((state, owner) => state.CreateCard<StoneArmor>(owner),
+                new CraftCost(typeof(StonePower), 8m)
             ),
-            //木剑
-            new((state, owner) => state.CreateCard<WoodenSword>(owner),
-                new CraftCost(typeof(WoodPower), 3m)
-            ),
+            
             //铁镐
             new(
                 (state, owner) => state.CreateCard<IronPickaxe>(owner),
                 new CraftCost(typeof(IronPower), 3m),
-                new CraftCost(typeof(WoodPower), 1m)
-            ),
-            //钻石剑
-            new(
-                (state, owner) => state.CreateCard<DiamondSword>(owner),
-                new CraftCost(typeof(DiamondPower), 2m),
                 new CraftCost(typeof(WoodPower), 1m)
             ),
             //铁剑
@@ -73,9 +73,17 @@ namespace STS2_WineFox.Cards
                 new CraftCost(typeof(IronPower), 2m),
                 new CraftCost(typeof(WoodPower), 1m)
             ),
-            //石甲
-            new((state, owner) => state.CreateCard<StoneArmor>(owner),
-                new CraftCost(typeof(StonePower), 8m)
+            //铁甲
+            new(
+                (state, owner) => state.CreateCard<IronArmor>(owner),
+                new CraftCost(typeof(IronPower), 8m)
+            ),
+            
+            //钻石剑
+            new(
+                (state, owner) => state.CreateCard<DiamondSword>(owner),
+                new CraftCost(typeof(DiamondPower), 2m),
+                new CraftCost(typeof(WoodPower), 1m)
             ),
         ];
     }

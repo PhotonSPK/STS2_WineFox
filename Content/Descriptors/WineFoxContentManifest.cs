@@ -21,6 +21,7 @@ namespace STS2_WineFox.Content.Descriptors
             new CharacterRegistrationEntry<WineFox>(),
             new SharedCardPoolRegistrationEntry<WineFoxTokenCardPool>(),
 
+            //CharacterCardPool
             new CardRegistrationEntry<WineFoxCardPool, WineFoxStrike>(),
             new CardRegistrationEntry<WineFoxCardPool, WineFoxDefend>(),
             new CardRegistrationEntry<WineFoxCardPool, BasicMine>(),
@@ -42,7 +43,8 @@ namespace STS2_WineFox.Content.Descriptors
             new CardRegistrationEntry<WineFoxCardPool, LessHoliday>(),
             new CardRegistrationEntry<WineFoxCardPool, RiclearPowerPlant>(),
             new CardRegistrationEntry<WineFoxCardPool, Alternator>(),
-
+            
+            //TokenCardPool
             new CardRegistrationEntry<WineFoxTokenCardPool, StonePickaxe>(),
             new CardRegistrationEntry<WineFoxTokenCardPool, StoneSword>(),
             new CardRegistrationEntry<WineFoxTokenCardPool, IronArmor>(),
@@ -52,10 +54,13 @@ namespace STS2_WineFox.Content.Descriptors
             new CardRegistrationEntry<WineFoxTokenCardPool, IronSword>(),
             new CardRegistrationEntry<WineFoxTokenCardPool, StoneArmor>(),
             new CardRegistrationEntry<WineFoxTokenCardPool, Nothing>(),
+            new CardRegistrationEntry<WineFoxTokenCardPool, WoodenPickaxe>(),
 
+            //RelicPool
             new RelicRegistrationEntry<WineFoxRelicPool, HandCrank>(),
             new RelicRegistrationEntry<WineFoxRelicPool, MaidBackpack>(),
 
+            //Power
             new PowerRegistrationEntry<StressPower>(),
             new PowerRegistrationEntry<DiggingPower>(),
             new PowerRegistrationEntry<WoodPower>(),
@@ -95,7 +100,8 @@ namespace STS2_WineFox.Content.Descriptors
                 "res://images/powers/strength_power.png"),
             KeywordRegistrationEntry.Card(WineFoxKeywords.Plating, "STS2_WINEFOX-PLATING",
                 "res://images/powers/plating_power.png"),
-            KeywordRegistrationEntry.Card(WineFoxKeywords.Material, "STS2_WINEFOX-MATERIAL")
+            KeywordRegistrationEntry.Card(WineFoxKeywords.Material, "STS2_WINEFOX-MATERIAL"),
+            KeywordRegistrationEntry.Card(WineFoxKeywords.Craft, "STS2_WINEFOX-CRAFT"),
         ];
     }
 }

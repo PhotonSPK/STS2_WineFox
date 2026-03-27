@@ -24,7 +24,8 @@ namespace STS2_WineFox.Character
             typeof(DiamondSword),
             typeof(IronSword),
             typeof(StoneArmor),
-            typeof(Nothing)
+            typeof(Nothing),
+            typeof(WoodenPickaxe)
         ];
     }
 }
