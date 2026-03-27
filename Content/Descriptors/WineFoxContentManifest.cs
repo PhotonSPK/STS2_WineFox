@@ -45,6 +45,7 @@ namespace STS2_WineFox.Content.Descriptors
             new CardRegistrationEntry<WineFoxCardPool, RiclearPowerPlant>(),
             new CardRegistrationEntry<WineFoxCardPool, Alternator>(),
             new CardRegistrationEntry<WineFoxCardPool, NetheritePickaxe>(),
+            new CardRegistrationEntry<WineFoxCardPool, CobblestoneGenerator>(),
             
             //TokenCardPool
             new CardRegistrationEntry<WineFoxTokenCardPool, StonePickaxe>(),
@@ -82,6 +83,7 @@ namespace STS2_WineFox.Content.Descriptors
             new PowerRegistrationEntry<RadiationLeakPower>(),
             new PowerRegistrationEntry<EasyPeasyPower>(),
             new PowerRegistrationEntry<NetheritePickaxePower>(),
+            new PowerRegistrationEntry<BrushStoneFormPower>(),
         ];
 
         public static IReadOnlyList<KeywordRegistrationEntry> KeywordEntries { get; } =

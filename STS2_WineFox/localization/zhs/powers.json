@@ -52,7 +52,10 @@
   "STS2_WINE_FOX_POWER_EASY_PEASY_POWER.smartDescription": "回合开始时，获得 {Amount} 费用，抽 {Amount} 张卡。",
   "STS2_WINE_FOX_POWER_NETHERITE_PICKAXE_POWER.title": "工具：下界合金镐",
   "STS2_WINE_FOX_POWER_NETHERITE_PICKAXE_POWER.description": "每在同一个回合内打出 2 张牌，就获得木板、石头、铁、钻石各 1 个。",
-  "STS2_WINE_FOX_POWER_NETHERITE_PICKAXE_POWER.smartDescription": "每在同一个回合内打出 2 张牌，就获得木板、石头、铁、钻石各 1 个。"
+  "STS2_WINE_FOX_POWER_NETHERITE_PICKAXE_POWER.smartDescription": "每在同一个回合内打出 2 张牌，就获得木板、石头、铁、钻石各 1 个。",
+  "STS2_WINE_FOX_POWER_BRUSH_STONE_FORM_POWER.title": "刷石形态",
+  "STS2_WINE_FOX_POWER_BRUSH_STONE_FORM_POWER.description": "在你的回合开始时获得2[gold]圆石[/gold]，每回合增加1层刷石形态。",
+  "STS2_WINE_FOX_POWER_BRUSH_STONE_FORM_POWER.smartDescription": "在你的回合开始时获得{Amount}[gold]圆石[/gold]"
   
   
   

@@ -8,12 +8,12 @@ using STS2RitsuLib.Scaffolding.Content;
 
 namespace STS2_WineFox.Cards.Rare
 {
-    public class AllItem() : WineFoxCard(0, CardType.Power, CardRarity.Rare, TargetType.Self)
+    public class AllItem() : WineFoxCard(0, CardType.Skill, CardRarity.Rare, TargetType.Self)
     {
         protected override IEnumerable<string> RegisteredKeywordIds =>
             [WineFoxKeywords.Wood,WineFoxKeywords.Stone,WineFoxKeywords.Iron,WineFoxKeywords.Diamond];
         
-        public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
+        public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Innate];
 
         protected override IEnumerable<DynamicVar> CanonicalVars =>
             [new EnergyVar(1),new CardsVar(1),new("Wood", 1m),new DynamicVar("Stone",1m),new DynamicVar("Iron",1m),new DynamicVar("Diamond",1m)];
@@ -25,7 +25,7 @@ namespace STS2_WineFox.Cards.Rare
             CardPlay play)
         {
             
-            await PlayerCmd.GainEnergy((decimal)DynamicVars.Energy.IntValue, Owner);
+            await PlayerCmd.GainEnergy(DynamicVars.Energy.IntValue, Owner);
             
             await CardPileCmd.Draw(choiceContext, DynamicVars.Cards.BaseValue, Owner);
             

@@ -35,9 +35,9 @@
   "STS2_WINE_FOX_CARD_IRON_SWORD.title": "铁剑",
   "STS2_WINE_FOX_CARD_IRON_SWORD.description": "造成{Damage:diff()}点伤害。\n下一张[gold]攻击[/gold]牌额外打出一次。\n(1个[gold]木板[/gold],2个[gold]铁锭[/gold])",
   "STS2_WINE_FOX_CARD_ALTER_PATH.title": "另辟蹊径",
-  "STS2_WINE_FOX_CARD_ALTER_PATH.description": "花费2木板，获得{Block:diff()}点格挡，抽 3 张牌。",
+  "STS2_WINE_FOX_CARD_ALTER_PATH.description": "花费2木板，获得{Block:diff()}点格挡，抽3张牌。",
   "STS2_WINE_FOX_CARD_STONE_ARMOR.title": "砖石甲",
-  "STS2_WINE_FOX_CARD_STONE_ARMOR.description": "获得7层[gold]覆甲[/gold]，每回合开始时失去 1 点敏捷。\n(8个[gold]圆石[/gold])",
+  "STS2_WINE_FOX_CARD_STONE_ARMOR.description": "获得7层[gold]覆甲[/gold]，每回合开始时失去1点敏捷。\n(8个[gold]圆石[/gold])",
   "STS2_WINE_FOX_CARD_POWER_UP.title": "换挡，加速，起飞",
   "STS2_WINE_FOX_CARD_POWER_UP.description": "获得{Stress:diff()}层应力。抽{Cards:diff()}张牌。",
   "STS2_WINE_FOX_CARD_IRON_ZOMBIE.title": "\"白色僵尸\"",
@@ -65,5 +65,7 @@
   "STS2_WINE_FOX_CARD_WOODEN_ARMOR.title": "木甲",
   "STS2_WINE_FOX_CARD_WOODEN_ARMOR.description": "获得 {Block:diff()} 点格挡。",
   "STS2_WINE_FOX_CARD_NETHERITE_PICKAXE.title": "下界合金镐",
-  "STS2_WINE_FOX_CARD_NETHERITE_PICKAXE.description": "每在同一个回合内打出 2 张牌，就获得木板、石头、铁、钻石各 1 个。"
+  "STS2_WINE_FOX_CARD_NETHERITE_PICKAXE.description": "每在同一个回合内打出 张牌，就获得木板、圆石、铁、钻石各1个。",
+  "STS2_WINE_FOX_CARD_COBBLESTONE_GENERATOR.title": "刷石形态",
+  "STS2_WINE_FOX_CARD_COBBLESTONE_GENERATOR.description": "在你的回合开始时获得2[gold]圆石[/gold]，每回合增加2。"
 }
