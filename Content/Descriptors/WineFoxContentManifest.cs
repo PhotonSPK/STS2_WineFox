@@ -51,6 +51,7 @@ namespace STS2_WineFox.Content.Descriptors
             new CardRegistrationEntry<WineFoxCardPool, ProductionDocument>(),
             new CardRegistrationEntry<WineFoxCardPool, RecordPlayer>(),
             new CardRegistrationEntry<WineFoxCardPool, Milk>(),
+            new CardRegistrationEntry<WineFoxCardPool, VacantDomain>(),
             
             //TokenCardPool
             new CardRegistrationEntry<WineFoxTokenCardPool, StonePickaxe>(),
