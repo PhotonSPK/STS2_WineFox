@@ -88,5 +88,7 @@
   "STS2_WINE_FOX_CARD_BACKUP_CRAFTING.title": "备用工作台",
   "STS2_WINE_FOX_CARD_BACKUP_CRAFTING.description": "[gold]合成[/gold]。",
   "STS2_WINE_FOX_CARD_TIC_TAC_TOE_GRID.title": "井字格",
-  "STS2_WINE_FOX_CARD_TIC_TAC_TOE_GRID.description": "造成{Damage:diff()}点伤害。\n[gold]合成[/gold]。"
+  "STS2_WINE_FOX_CARD_TIC_TAC_TOE_GRID.description": "造成{Damage:diff()}点伤害。\n[gold]合成[/gold]。",
+  "STS2_WINE_FOX_CARD_TRADITIONALIST.title": "传统派",
+  "STS2_WINE_FOX_CARD_TRADITIONALIST.description": "花费2[gold]木板[/gold]。\n[gold]合成[/gold]。\n抽{Cards:diff()}张牌。"
 }

@@ -20,7 +20,7 @@ namespace STS2_WineFox.Powers
             if (player.Creature != Owner) return;
 
             Flash();
-            await PowerCmd.Apply<DexterityPower>(Owner, -1m, Owner, null);
+            await PowerCmd.Apply<DexterityPower>(Owner, -Amount, Owner, null);
         }
     }
 }
