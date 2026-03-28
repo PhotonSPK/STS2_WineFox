@@ -103,6 +103,8 @@ namespace STS2_WineFox
             public const string CardPressWToThink = Root + "/cards/card_press_w_to_think.png";
             public const string CardBackupCrafting = Root + "/cards/card_backup_crafting.png";
             public const string CardTicTacToeGrid = Root + "/cards/card_tic_tac_toe_grid.png";
+            public const string CardWorkWork = Root + "/cards/card_work_work.png";
+            public const string CardLessHoliday = Root + "/cards/card_less_holiday.png";
         }
 
         public static class Audio

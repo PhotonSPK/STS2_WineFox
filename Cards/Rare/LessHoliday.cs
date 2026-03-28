@@ -1,33 +1,44 @@
-﻿using MegaCrit.Sts2.Core.Commands;
+﻿using MegaCrit.Sts2.Core.CardSelection;
+using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using STS2_WineFox.Powers;
+using MegaCrit.Sts2.Core.Models;
+using STS2_WineFox.Cards.Token;
 using STS2RitsuLib.Scaffolding.Content;
 
 namespace STS2_WineFox.Cards.Rare
 {
-    public class LessHoliday() : WineFoxCard(2, CardType.Power, CardRarity.Rare, TargetType.Self)
+    public class LessHoliday() : WineFoxCard(2, CardType.Skill, CardRarity.Rare, TargetType.Self)
     {
-        protected override IEnumerable<string> RegisteredKeywordIds =>
-            [WineFoxKeywords.Stress];
 
-        protected override IEnumerable<DynamicVar> CanonicalVars =>
-            [new("Steam", 1m)];
-
-        public override CardAssetProfile AssetProfile => Art(Const.Paths.CardSteamEngine);
+        public override CardAssetProfile AssetProfile => Art(Const.Paths.CardLessHoliday);
 
         protected override async Task OnPlay(
             PlayerChoiceContext choiceContext,
             CardPlay play)
         {
-            await PowerCmd.Apply<SteamPower>(
-                Owner.Creature, DynamicVars["Steam"].BaseValue, Owner.Creature, this);
+            var owner = Owner;
+            
+            var handCards = PileType.Hand.GetPile(owner).Cards;
+            if (handCards.Count == 0) return;
+            
+            var prefs = new CardSelectorPrefs(CardSelectorPrefs.TransformSelectionPrompt, 1);
+            IReadOnlyList<CardModel> options = handCards;
+            var selectedList = await CardSelectCmd.FromSimpleGrid(choiceContext, options, owner, prefs);
+            var chosen = selectedList.FirstOrDefault();
+            if (chosen == null) return;
+            
+            CardPileAddResult? result = await CardCmd.TransformTo<WorkWork>(chosen);
+
+            if (IsUpgraded && result.HasValue)
+            {
+                CardCmd.Upgrade(result.Value.cardAdded);
+            }
         }
 
         protected override void OnUpgrade()
         {
-            EnergyCost.UpgradeBy(-1); // 2 → 1
+
         }
     }
 }

@@ -11,6 +11,8 @@ namespace STS2_WineFox.Cards.Common;
 public class TicTacToeGrid() : WineFoxCard(
     1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
 {
+    protected override IEnumerable<string> RegisteredKeywordIds =>
+        [WineFoxKeywords.Craft];
     protected override IEnumerable<DynamicVar> CanonicalVars =>
         [new DamageVar(8m, ValueProp.Move)];
 
@@ -34,6 +36,6 @@ public class TicTacToeGrid() : WineFoxCard(
 
     protected override void OnUpgrade()
     {
-
+        DynamicVars.Damage.UpgradeValueBy(3m);
     }
 }

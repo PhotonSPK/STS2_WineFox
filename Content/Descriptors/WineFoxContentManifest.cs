@@ -68,6 +68,7 @@ namespace STS2_WineFox.Content.Descriptors
             new CardRegistrationEntry<WineFoxTokenCardPool, Nothing>(),
             new CardRegistrationEntry<WineFoxTokenCardPool, WoodenPickaxe>(),
             new CardRegistrationEntry<WineFoxTokenCardPool, WoodenArmor>(),
+            new CardRegistrationEntry<WineFoxTokenCardPool, WorkWork>(),
 
             //RelicPool
             new RelicRegistrationEntry<WineFoxRelicPool, HandCrank>(),
