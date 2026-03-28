@@ -59,6 +59,7 @@ namespace STS2_WineFox
             public const string EasyPeasyPowerIcon = Root + "/powers/easy_peasy_power.png";
             public const string NetheritePickaxePowerIcon = Root + "/powers/netherite_pickaxe_power.png";
             public const string BrushStoneFormPowerIcon = Root + "/powers/brush_stone_form_power.png";
+            public const string SlashBladeWoodPowerIcon = Root + "/powers/slash_blade_wood_power.png";
 
             //Card
             public const string CardStonePickaxe = Root + "/cards/card_stone_pickaxe.png";
@@ -106,6 +107,7 @@ namespace STS2_WineFox
             public const string CardWorkWork = Root + "/cards/card_work_work.png";
             public const string CardLessHoliday = Root + "/cards/card_less_holiday.png";
             public const string CardTraditionalist = Root + "/cards/card_traditionalist.png";
+            public const string CardSlashBladeWood = Root + "/cards/card_slash_blade_wood.png";
         }
 
         public static class Audio

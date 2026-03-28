@@ -90,5 +90,7 @@
   "STS2_WINE_FOX_CARD_TIC_TAC_TOE_GRID.title": "井字格",
   "STS2_WINE_FOX_CARD_TIC_TAC_TOE_GRID.description": "造成{Damage:diff()}点伤害。\n[gold]合成[/gold]。",
   "STS2_WINE_FOX_CARD_TRADITIONALIST.title": "传统派",
-  "STS2_WINE_FOX_CARD_TRADITIONALIST.description": "花费2[gold]木板[/gold]。\n[gold]合成[/gold]。\n抽{Cards:diff()}张牌。"
+  "STS2_WINE_FOX_CARD_TRADITIONALIST.description": "花费2[gold]木板[/gold]。\n[gold]合成[/gold]。\n抽{Cards:diff()}张牌。",
+  "STS2_WINE_FOX_CARD_SLASH_BLADE_WOOD.title": "拔刀剑:无铭刀「木偶」",
+  "STS2_WINE_FOX_CARD_SLASH_BLADE_WOOD.description": "每当你在回合中抽1张牌，获得{SlashBladeWoodPower:diff()}层[gold]活力[/gold]"
 }
