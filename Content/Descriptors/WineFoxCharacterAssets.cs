@@ -13,6 +13,7 @@ namespace STS2_WineFox.Content.Descriptors
                 VisualsPath = Const.Paths.CharacterVisualsScene,
                 // EnergyCounterPath = Const.Paths.CustomEnergyCounterPath,
                 RestSiteAnimPath = Const.Paths.CharacterRestSiteAnimScene,
+                MerchantAnimPath = Const.Paths.CharacterMerchantAnimScene,
             })
             .WithUi(new(
                 Const.Paths.CharacterIcon,
